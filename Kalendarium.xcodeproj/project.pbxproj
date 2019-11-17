@@ -3,16 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2705E058237F67F800CF013C /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2705E057237F67F800CF013C /* EventStore.swift */; };
 		270F2FEC23772E16006B78A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F2FEB23772E16006B78A7 /* AppDelegate.swift */; };
-		270F2FEE23772E16006B78A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F2FED23772E16006B78A7 /* ViewController.swift */; };
 		270F2FF023772E18006B78A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 270F2FEF23772E18006B78A7 /* Assets.xcassets */; };
 		270F2FF323772E18006B78A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 270F2FF123772E18006B78A7 /* Main.storyboard */; };
 		270F2FFF23772E18006B78A7 /* KalendariumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F2FFE23772E18006B78A7 /* KalendariumTests.swift */; };
 		270F300A23772E18006B78A7 /* KalendariumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F300923772E18006B78A7 /* KalendariumUITests.swift */; };
+		270F301923776036006B78A7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F301823776036006B78A7 /* CalendarView.swift */; };
+		270F301C23777BC2006B78A7 /* SwiftMoment in Frameworks */ = {isa = PBXBuildFile; productRef = 270F301B23777BC2006B78A7 /* SwiftMoment */; };
+		270F301F237878C7006B78A7 /* NSGraphicsImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F301E237878C7006B78A7 /* NSGraphicsImageRenderer.swift */; };
+		270F3022237879F3006B78A7 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 270F3021237879F3006B78A7 /* SwiftyUserDefaults */; };
+		270F302523788AC1006B78A7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 270F302423788AC0006B78A7 /* .swiftlint.yml */; };
+		274A5C5A238053500019619C /* EventMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C59238053500019619C /* EventMenuItemViewController.swift */; };
+		274A5C5C238053A00019619C /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5B238053A00019619C /* NSDate+Extension.swift */; };
+		274A5C5E238054310019619C /* CustomMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5D238054310019619C /* CustomMenuItemView.swift */; };
+		2791B7F9237B2661009E506E /* DesignFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B7F8237B2661009E506E /* DesignFacts.swift */; };
+		2791B7FB237B2ABC009E506E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B7FA237B2ABC009E506E /* Clock.swift */; };
+		2791B7FE237B2E12009E506E /* Moment+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B7FD237B2E12009E506E /* Moment+Extension.swift */; };
+		2791B801237B2F27009E506E /* MonthControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B800237B2F27009E506E /* MonthControlButton.swift */; };
+		2791B803237B3034009E506E /* VibrantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B802237B3034009E506E /* VibrantView.swift */; };
+		2791B805237B32BA009E506E /* CalendarDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B804237B32BA009E506E /* CalendarDayViewController.swift */; };
+		2791B807237B3341009E506E /* CalendarDayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B806237B3341009E506E /* CalendarDayButton.swift */; };
+		2791B809237B33EB009E506E /* NSColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B808237B33EB009E506E /* NSColor+Extension.swift */; };
+		2792F40D2379C8BA00CAF8F6 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792F40C2379C8BA00CAF8F6 /* MenuController.swift */; };
+		2792F40F2379D4AA00CAF8F6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792F40E2379D4AA00CAF8F6 /* CalendarViewController.swift */; };
+		2792F411237A1C4C00CAF8F6 /* CalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792F410237A1C4C00CAF8F6 /* CalendarGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2705E057237F67F800CF013C /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStore.swift; path = Kalendarium/Models/EventStore.swift; sourceTree = SOURCE_ROOT; };
 		270F2FE823772E16006B78A7 /* Kalendarium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kalendarium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		270F2FEB23772E16006B78A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		270F2FED23772E16006B78A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		270F2FEF23772E18006B78A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		270F2FF223772E18006B78A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		270F2FF423772E18006B78A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +65,23 @@
 		270F300523772E18006B78A7 /* KalendariumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KalendariumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		270F300923772E18006B78A7 /* KalendariumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KalendariumUITests.swift; sourceTree = "<group>"; };
 		270F300B23772E18006B78A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		270F301823776036006B78A7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		270F301E237878C7006B78A7 /* NSGraphicsImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSGraphicsImageRenderer.swift; sourceTree = "<group>"; };
+		270F302423788AC0006B78A7 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		274A5C59238053500019619C /* EventMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMenuItemViewController.swift; sourceTree = "<group>"; };
+		274A5C5B238053A00019619C /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		274A5C5D238054310019619C /* CustomMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuItemView.swift; sourceTree = "<group>"; };
+		2791B7F8237B2661009E506E /* DesignFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignFacts.swift; sourceTree = "<group>"; };
+		2791B7FA237B2ABC009E506E /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		2791B7FD237B2E12009E506E /* Moment+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moment+Extension.swift"; sourceTree = "<group>"; };
+		2791B800237B2F27009E506E /* MonthControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthControlButton.swift; sourceTree = "<group>"; };
+		2791B802237B3034009E506E /* VibrantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrantView.swift; sourceTree = "<group>"; };
+		2791B804237B32BA009E506E /* CalendarDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayViewController.swift; sourceTree = "<group>"; };
+		2791B806237B3341009E506E /* CalendarDayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayButton.swift; sourceTree = "<group>"; };
+		2791B808237B33EB009E506E /* NSColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
+		2792F40C2379C8BA00CAF8F6 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		2792F40E2379D4AA00CAF8F6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2792F410237A1C4C00CAF8F6 /* CalendarGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270F301C23777BC2006B78A7 /* SwiftMoment in Frameworks */,
+				270F3022237879F3006B78A7 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +114,7 @@
 		270F2FDF23772E16006B78A7 = {
 			isa = PBXGroup;
 			children = (
+				270F302323788A54006B78A7 /* External Config */,
 				270F2FEA23772E16006B78A7 /* Kalendarium */,
 				270F2FFD23772E18006B78A7 /* KalendariumTests */,
 				270F300823772E18006B78A7 /* KalendariumUITests */,
@@ -96,8 +135,13 @@
 		270F2FEA23772E16006B78A7 /* Kalendarium */ = {
 			isa = PBXGroup;
 			children = (
+				2791B7FF237B2EFB009E506E /* Custom Controls */,
+				2791B7FC237B2DDA009E506E /* Extensions */,
+				2791B7F7237B263C009E506E /* Models */,
+				2792F40B2379C87800CAF8F6 /* Controllers */,
+				270F301D2378789E006B78A7 /* Custom Classes */,
+				270F301723775FE6006B78A7 /* Views */,
 				270F2FEB23772E16006B78A7 /* AppDelegate.swift */,
-				270F2FED23772E16006B78A7 /* ViewController.swift */,
 				270F2FEF23772E18006B78A7 /* Assets.xcassets */,
 				270F2FF123772E18006B78A7 /* Main.storyboard */,
 				270F2FF423772E18006B78A7 /* Info.plist */,
@@ -124,6 +168,73 @@
 			path = KalendariumUITests;
 			sourceTree = "<group>";
 		};
+		270F301723775FE6006B78A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				270F301823776036006B78A7 /* CalendarView.swift */,
+				2791B802237B3034009E506E /* VibrantView.swift */,
+				274A5C5D238054310019619C /* CustomMenuItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		270F301D2378789E006B78A7 /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				270F301E237878C7006B78A7 /* NSGraphicsImageRenderer.swift */,
+				2792F410237A1C4C00CAF8F6 /* CalendarGrid.swift */,
+			);
+			path = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		270F302323788A54006B78A7 /* External Config */ = {
+			isa = PBXGroup;
+			children = (
+				270F302423788AC0006B78A7 /* .swiftlint.yml */,
+			);
+			path = "External Config";
+			sourceTree = "<group>";
+		};
+		2791B7F7237B263C009E506E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2791B7FA237B2ABC009E506E /* Clock.swift */,
+				2791B7F8237B2661009E506E /* DesignFacts.swift */,
+				2705E057237F67F800CF013C /* EventStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2791B7FC237B2DDA009E506E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2791B808237B33EB009E506E /* NSColor+Extension.swift */,
+				274A5C5B238053A00019619C /* NSDate+Extension.swift */,
+				2791B7FD237B2E12009E506E /* Moment+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2791B7FF237B2EFB009E506E /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				2791B800237B2F27009E506E /* MonthControlButton.swift */,
+				2791B806237B3341009E506E /* CalendarDayButton.swift */,
+			);
+			path = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		2792F40B2379C87800CAF8F6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2792F40C2379C8BA00CAF8F6 /* MenuController.swift */,
+				2792F40E2379D4AA00CAF8F6 /* CalendarViewController.swift */,
+				2791B804237B32BA009E506E /* CalendarDayViewController.swift */,
+				274A5C59238053500019619C /* EventMenuItemViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,12 +245,17 @@
 				270F2FE423772E16006B78A7 /* Sources */,
 				270F2FE523772E16006B78A7 /* Frameworks */,
 				270F2FE623772E16006B78A7 /* Resources */,
+				270F302623788B9E006B78A7 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Kalendarium;
+			packageProductDependencies = (
+				270F301B23777BC2006B78A7 /* SwiftMoment */,
+				270F3021237879F3006B78A7 /* SwiftyUserDefaults */,
+			);
 			productName = Kalendarium;
 			productReference = 270F2FE823772E16006B78A7 /* Kalendarium.app */;
 			productType = "com.apple.product-type.application";
@@ -187,7 +303,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Mike Manzo";
 				TargetAttributes = {
 					270F2FE723772E16006B78A7 = {
@@ -212,6 +328,10 @@
 				Base,
 			);
 			mainGroup = 270F2FDF23772E16006B78A7;
+			packageReferences = (
+				270F301A23777BC2006B78A7 /* XCRemoteSwiftPackageReference "SwiftMoment" */,
+				270F3020237879F3006B78A7 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+			);
 			productRefGroup = 270F2FE923772E16006B78A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270F302523788AC1006B78A7 /* .swiftlint.yml in Resources */,
 				270F2FF023772E18006B78A7 /* Assets.xcassets in Resources */,
 				270F2FF323772E18006B78A7 /* Main.storyboard in Resources */,
 			);
@@ -249,13 +370,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		270F302623788B9E006B78A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		270F2FE423772E16006B78A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				270F2FEE23772E16006B78A7 /* ViewController.swift in Sources */,
+				2791B801237B2F27009E506E /* MonthControlButton.swift in Sources */,
+				2791B805237B32BA009E506E /* CalendarDayViewController.swift in Sources */,
+				2791B809237B33EB009E506E /* NSColor+Extension.swift in Sources */,
+				274A5C5A238053500019619C /* EventMenuItemViewController.swift in Sources */,
+				2792F40F2379D4AA00CAF8F6 /* CalendarViewController.swift in Sources */,
+				274A5C5E238054310019619C /* CustomMenuItemView.swift in Sources */,
+				2792F40D2379C8BA00CAF8F6 /* MenuController.swift in Sources */,
+				2705E058237F67F800CF013C /* EventStore.swift in Sources */,
+				2791B7FB237B2ABC009E506E /* Clock.swift in Sources */,
+				2791B7F9237B2661009E506E /* DesignFacts.swift in Sources */,
+				270F301F237878C7006B78A7 /* NSGraphicsImageRenderer.swift in Sources */,
+				2792F411237A1C4C00CAF8F6 /* CalendarGrid.swift in Sources */,
 				270F2FEC23772E16006B78A7 /* AppDelegate.swift in Sources */,
+				274A5C5C238053A00019619C /* NSDate+Extension.swift in Sources */,
+				2791B7FE237B2E12009E506E /* Moment+Extension.swift in Sources */,
+				2791B807237B3341009E506E /* CalendarDayButton.swift in Sources */,
+				270F301923776036006B78A7 /* CalendarView.swift in Sources */,
+				2791B803237B3034009E506E /* VibrantView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -406,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -420,6 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kalendarium/Kalendarium.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3ETXMLGRJN;
@@ -440,6 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kalendarium/Kalendarium.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3ETXMLGRJN;
@@ -579,6 +738,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		270F301A23777BC2006B78A7 /* XCRemoteSwiftPackageReference "SwiftMoment" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/akosma/SwiftMoment.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		270F3020237879F3006B78A7 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		270F301B23777BC2006B78A7 /* SwiftMoment */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270F301A23777BC2006B78A7 /* XCRemoteSwiftPackageReference "SwiftMoment" */;
+			productName = SwiftMoment;
+		};
+		270F3021237879F3006B78A7 /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 270F3020237879F3006B78A7 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 270F2FE023772E16006B78A7 /* Project object */;
 }

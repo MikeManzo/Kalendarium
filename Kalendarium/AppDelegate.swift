@@ -10,17 +10,18 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
+    // MARK: IBOutlets
+    
+    // MARK: Class members
+    var menuController: MenuController?
+   
+    // MARK: Compulsary Base Class Methods
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        // Kick off all the things
+        menuController = MenuController()
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        
     }
-
-
 }
-
