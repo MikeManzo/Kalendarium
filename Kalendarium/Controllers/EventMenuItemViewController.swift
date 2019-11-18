@@ -16,22 +16,25 @@ class EventMenuItemViewController: NSViewController {
     var timeLabel: NSTextField?
     var separator: NSTextField?
     let menuItem: NSMenuItem
-    let event: EKEvent
+    let theEvent: EKEvent
     
     private var isMultiLine: Bool {
-        return !event.isAllDay || event.location != nil
+        return !theEvent.isAllDay || theEvent.location != nil
     }
 
     init(event: EKEvent) {
-        self.event = event
-        menuItem = NSMenuItem(title: event.title, action: #selector(self.viewInCalendar), keyEquivalent: "")
+        theEvent = event
+        menuItem = NSMenuItem(title: event.title, action: #selector(self.viewInCalendar(_:)), keyEquivalent: "")
         menuItem.isEnabled = true
+
         let paragraphStyle = NSMutableParagraphStyle()
+
         paragraphStyle.lineBreakMode = .byTruncatingTail
         let primaryAttributes: [NSAttributedString.Key: Any] = [
             .font: NSFont.systemFont(ofSize: 13),
             .paragraphStyle: paragraphStyle
         ]
+
         let secondaryAttributes: [NSAttributedString.Key: Any] = [
             .font: NSFont.systemFont(ofSize: 11),
             .foregroundColor: NSColor.secondaryLabelColor,
@@ -52,8 +55,20 @@ class EventMenuItemViewController: NSViewController {
         
         super.init(nibName: nil, bundle: nil)
         menuItem.view = view
+        menuItem.target = self
     }
     
+    override func mouseDown(with event: NSEvent) {
+        super.mouseDown(with: event)
+    }
+    
+    override func mouseUp(with event: NSEvent) {
+        super.mouseUp(with: event)
+
+        let menuIndex = (menuItem.menu?.index(of: menuItem))!
+        menuItem.menu?.performActionForItem(at: menuIndex)
+    }
+
     override func loadView() {
         let height = isMultiLine ? design.multiLineMenuItemHeight : design.singleLineMenuItemHeight
         view = CustomMenuItemView(frame: NSRect(x: 0, y: 0, width: 240, height: height))
@@ -78,7 +93,7 @@ class EventMenuItemViewController: NSViewController {
         let dot = NSView()
         dot.translatesAutoresizingMaskIntoConstraints = false
         dot.wantsLayer = true
-        dot.layer?.backgroundColor = event.calendar.color.cgColor
+        dot.layer?.backgroundColor = theEvent.calendar.color.cgColor
         dot.layer?.cornerRadius = design.dotSize / 8
         view.addSubview(dot)
         dot.widthAnchor.constraint(equalToConstant: design.dotSize).isActive = true
@@ -127,14 +142,14 @@ class EventMenuItemViewController: NSViewController {
     }
     
     public func highlight() {
-        
+        print("Event Highlighted")
     }
     
     public func unhighlight() {
-        
+        print("Event Un-Highlighted")
     }
     
-    @objc private func viewInCalendar() {
-        
+    @objc private func viewInCalendar(_ sender: NSMenuItem) {
+        print("\(sender.title) was selected")
     }
 }

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftMoment",
+        "repositoryURL": "https://github.com/akosma/SwiftMoment.git",
+        "state": {
+          "branch": "master",
+          "revision": "4cd4ee886328f9514c20f050b81d1725337ddd33",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftyUserDefaults",
+        "repositoryURL": "https://github.com/sunshinejr/SwiftyUserDefaults",
+        "state": {
+          "branch": "master",
+          "revision": "dbd126b8957fc5af94d1ed5443f8f4b9405356ee",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
