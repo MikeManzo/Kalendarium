@@ -9,10 +9,11 @@
 import Cocoa
 
 enum DayViewState {
-    case normal
-    case selected
-    case today
     case outOfMonth
+    case selected
+    case normal
+    case today
+    case hover
 }
 
 class CalendarDayButton: NSButton {
@@ -40,6 +41,7 @@ class CalendarDayButton: NSButton {
         layer?.cornerRadius = frame.width / 2
         self.target = target
         self.action = action
+        
         refreshAppearance()
     }
 
@@ -47,8 +49,8 @@ class CalendarDayButton: NSButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // CGColors need to be recalculated from NSColor
     override func viewDidChangeEffectiveAppearance() {
-        // New CGColors need to be recalculated from NSColor
         refreshAppearance()
     }
 
@@ -63,6 +65,9 @@ class CalendarDayButton: NSButton {
         case .outOfMonth:
             layer?.backgroundColor = NSColor.clear.cgColor
             attributedTitle = getStringWithColor(string: label, color: .disabledText)
+        case .hover:
+            layer?.backgroundColor = NSColor.dayHoverHighlight.cgColor
+            attributedTitle = getStringWithColor(string: label, color: .primaryTextInvert)
         default:
             layer?.backgroundColor = NSColor.clear.cgColor
             attributedTitle = getStringWithColor(string: label, color: .primaryText)
@@ -74,5 +79,33 @@ class CalendarDayButton: NSButton {
             .kern: -0.15,
             .foregroundColor: color
         ])
+    }
+    
+    // By default, every menu item has its superview as NSVisualEffectView
+    override func mouseEntered(with event: NSEvent) {
+        super.mouseEntered(with: event)
+
+        if viewState != .selected { // Preserve the "selected" state
+            viewState = .hover
+        }
+    }
+    
+    // While exiting from the view, It will make NSVisualEffectView as default.
+    override func mouseExited(with event: NSEvent) {
+        super.mouseExited(with: event)
+        
+        if viewState != .selected { // Preserve the "selected" state
+            viewState = .normal
+        }
+    }
+
+    // Adding Tracking area to track mouse movements on view.
+    override func viewDidMoveToSuperview() {
+        super.viewDidMoveToSuperview()
+
+        let trackingArea = NSTrackingArea(rect: bounds,
+                                          options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeInActiveApp],
+                                          owner: self, userInfo: nil)
+        self.addTrackingArea(trackingArea)
     }
 }

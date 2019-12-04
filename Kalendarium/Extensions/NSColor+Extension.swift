@@ -15,4 +15,5 @@ extension NSColor {
     static let disabledText = NSColor(named: NSColor.Name("disabledText"))!
     static let primaryText = NSColor(named: NSColor.Name("primaryText"))!
     static let accent = NSColor(named: NSColor.Name("accent"))!
+    static let dayHoverHighlight = NSColor.blue
 }
