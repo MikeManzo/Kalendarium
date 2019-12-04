@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CalendarNameView" customModule="Kalendarium" customModuleProvider="target">
+            <connections>
+                <outlet property="calendarColor" destination="zDp-K6-Thx" id="Cn8-ek-Nr9"/>
+                <outlet property="calendarName" destination="d4N-i8-Saf" id="c5G-9V-DJ9"/>
+                <outlet property="contentView" destination="8qA-Bl-pOK" id="hfr-yB-8iS"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="8qA-Bl-pOK" customClass="CalendarNameView" customModule="Kalendarium" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="25"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zDp-K6-Thx">
+                    <rect key="frame" x="8" y="5" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="B8c-wg-zfh"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="fde-9b-tmM"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-i8-Saf">
+                    <rect key="frame" x="30" y="5" width="98" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Calander Name" id="D4J-VF-4Jg" userLabel="Calandar Name">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="d4N-i8-Saf" secondAttribute="trailing" constant="14" id="A0b-ll-rHQ"/>
+                <constraint firstItem="d4N-i8-Saf" firstAttribute="leading" secondItem="zDp-K6-Thx" secondAttribute="trailing" constant="8" symbolic="YES" id="jAQ-3F-BAs"/>
+                <constraint firstItem="zDp-K6-Thx" firstAttribute="centerY" secondItem="8qA-Bl-pOK" secondAttribute="centerY" id="jyK-xN-JNH"/>
+                <constraint firstItem="zDp-K6-Thx" firstAttribute="top" secondItem="d4N-i8-Saf" secondAttribute="top" id="m0D-BK-kkC"/>
+                <constraint firstItem="zDp-K6-Thx" firstAttribute="leading" secondItem="8qA-Bl-pOK" secondAttribute="leading" constant="8" id="m3P-iS-Tzu"/>
+            </constraints>
+            <point key="canvasLocation" x="216" y="-43"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+    </resources>
+</document>

@@ -105,6 +105,9 @@ class CalendarViewController: NSViewController {
             $0.removeFromParent()
         }
 
+        dayViewControllers.removeAll()
+//        dayViewControllers = []
+        
         monthLabel.stringValue = weeks[1][0].monthName
         if weeks[1][0].year != currentTime.year {
             monthLabel.stringValue += " \(weeks[1][0].year)"

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferencesController" customModule="Kalendarium" customModuleProvider="target">
+            <connections>
+                <outlet property="calendarColorView" destination="J9l-Ej-m0X" id="Sm6-Rt-KLq"/>
+                <outlet property="calendarIcon" destination="xT1-tU-Ifn" id="f5g-5g-zi8"/>
+                <outlet property="calendarList" destination="uPT-1w-Usp" id="nEw-7D-YlB"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="6MI-Av-PzM"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <subviews>
+                <gridView fixedFrame="YES" xPlacement="center" yPlacement="center" rowAlignment="none" rowSpacing="8" columnSpacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OXO-9J-uVL">
+                    <rect key="frame" x="20" y="174" width="424" height="78"/>
+                    <rows>
+                        <gridRow id="4qf-1c-hXF"/>
+                        <gridRow id="RtG-ge-02E"/>
+                        <gridRow id="Z8c-KW-D11"/>
+                    </rows>
+                    <columns>
+                        <gridColumn id="6Xo-XK-twR"/>
+                        <gridColumn id="rfl-LH-HEt"/>
+                        <gridColumn id="m6x-ap-nsg"/>
+                        <gridColumn id="z7d-XU-SY0"/>
+                    </columns>
+                    <gridCells>
+                        <gridCell row="4qf-1c-hXF" column="6Xo-XK-twR" xPlacement="trailing" id="swJ-Qg-yex">
+                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o5i-8a-SF1">
+                                <rect key="frame" x="-2" y="55" width="98" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Menubar Color:" id="0PV-Bm-A3Y">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </gridCell>
+                        <gridCell row="4qf-1c-hXF" column="rfl-LH-HEt" xPlacement="leading" id="9rp-EF-XQ4">
+                            <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="J9l-Ej-m0X" customClass="QJColorChooser" customModule="QJColorChooser">
+                                <rect key="frame" x="104" y="48" width="100" height="30"/>
+                            </customView>
+                        </gridCell>
+                        <gridCell row="4qf-1c-hXF" column="m6x-ap-nsg" xPlacement="leading" id="hkW-OX-x6i">
+                            <imageView key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xT1-tU-Ifn">
+                                <rect key="frame" x="214" y="48" width="100" height="30"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="WM1-K1-McL"/>
+                            </imageView>
+                        </gridCell>
+                        <gridCell row="4qf-1c-hXF" column="z7d-XU-SY0" id="hrR-lr-xsE"/>
+                        <gridCell row="RtG-ge-02E" column="6Xo-XK-twR" xPlacement="trailing" id="PqC-bB-Y0P">
+                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0jr-2B-ChB">
+                                <rect key="frame" x="55" y="24" width="41" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Login:" id="G9g-5o-kdv">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </gridCell>
+                        <gridCell row="RtG-ge-02E" column="rfl-LH-HEt" xPlacement="leading" id="y34-Nf-hzB">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bio-pq-0Mx">
+                                <rect key="frame" x="102" y="23" width="101" height="18"/>
+                                <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CiG-pn-shj">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </gridCell>
+                        <gridCell row="RtG-ge-02E" column="m6x-ap-nsg" id="KOP-N2-5E7"/>
+                        <gridCell row="RtG-ge-02E" column="z7d-XU-SY0" id="kCw-gq-juj"/>
+                        <gridCell row="Z8c-KW-D11" column="6Xo-XK-twR" xPlacement="trailing" id="Xht-Ua-YY5">
+                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h2l-GR-AQL">
+                                <rect key="frame" x="37" y="0.0" width="59" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Updates:" id="J0E-jJ-Y8i">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </gridCell>
+                        <gridCell row="Z8c-KW-D11" column="rfl-LH-HEt" xPlacement="leading" id="JIc-J9-40g">
+                            <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2d1-Nt-oo0">
+                                <rect key="frame" x="102" y="-1" width="93" height="18"/>
+                                <buttonCell key="cell" type="check" title="Check daily" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Abx-Ft-Amj">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </gridCell>
+                        <gridCell row="Z8c-KW-D11" column="m6x-ap-nsg" id="dxv-r9-GtY"/>
+                        <gridCell row="Z8c-KW-D11" column="z7d-XU-SY0" id="Qya-g1-EAI"/>
+                    </gridCells>
+                </gridView>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPT-1w-Usp">
+                    <rect key="frame" x="18" y="41" width="146" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="lXg-hl-1dG">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <menu key="menu" autoenablesItems="NO" id="Dyl-WE-ul8"/>
+                    </popUpButtonCell>
+                </popUpButton>
+            </subviews>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+    </objects>
+</document>

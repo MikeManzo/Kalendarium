@@ -8,6 +8,7 @@
 
 import Cocoa
 import EventKit
+import Preferences
 import SwiftMoment
 import SwiftyUserDefaults
 
@@ -16,21 +17,38 @@ extension DefaultsKeys {
     var menuBarCalendarColor: DefaultsKey<NSColor> { return .init("Defaults", defaultValue: NSColor.red) }
 }
 
-class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStoreDelegate {
+extension PreferencePane.Identifier {
+    static let calendar = Identifier("calendar")
+    static let general = Identifier("general")
+}
+
+class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
     // MARK: Class members
     let appBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     var calendarViewController: CalendarViewController?
     var highlightedEvent: EventMenuItemViewController?
     let eventItemSeperator = NSMenuItem.separator()
-    var eventStore: EventStore?
+//    var eventStore = EventStore()
     var events: [EKEvent] = []
     let mainMenu = NSMenu()
     var menuIsOpen = false
+    
+    lazy var preferences: [PreferencePane] = [
+        GeneralPreferencesController(),
+        CalendarPreferencesController()
+    ]
+
+    lazy var preferencesWindowController = PreferencesWindowController(
+        preferencePanes: preferences,
+        style: .toolbarItems,
+        animated: true,
+        hidesToolbarForSingleItem: true
+    )
 
     var selectedTime: Moment {
         didSet {
             calendarViewController?.updateCalendar(currentTime: Clock.shared.currentTick, selectedTime: selectedTime)
-            if eventStore!.hasAccessToEvents {
+            if EventStore.shared.isAuthorized {
                 updateEventItems()
             }
         }
@@ -98,6 +116,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
      */
     @IBAction func showPreferences(_ sender: NSMenuItem) {
         print("Showing Preferences")
+        preferencesWindowController.show(preferencePane: .general)
     }
     
     /**
@@ -121,8 +140,14 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
      - Returns: Nothing
      */
     func setupEvents() {
-        eventStore = EventStore(delegate: self)         // Setup Event Store
-        eventStore?.requestAccessToEvents()             // Setup for events
+        EventStore.shared.requestAccessToEvents(callback: { [unowned self] isAuthorized, error in
+            switch isAuthorized {
+            case true:
+                self.updateEventItems()
+            case false:
+                print(error!)
+            }
+        })
     }
     
     // MARK: Private methods
@@ -182,6 +207,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
         mainMenu.addItem(quitMenuItem)
         /// Quit Menu Item
     }
+    
     /**
      Create a new icon for display in the menubar; the base image is a simple image with a
      rectangle at the top (user configurable)
@@ -206,7 +232,8 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
             ctx.drawPath(using: .fillStroke)
         }
         
-        return drawTextOnImage(text: String(moment().day), image: img)
+//        return drawTextOnImage(text: String(moment().day), image: img)
+        return img.drawCenteredText(text: String(moment().day), size: 12, offset: 4)
     }
     
     /**
@@ -265,7 +292,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
      - Returns: Nothing
      */
     private func updateEventItems() {
-        events = (eventStore?.getEventsForDay(endingAfter: selectedTime.startOf(.days)))!
+        events = (EventStore.shared.getEventsForDay(endingAfter: selectedTime.startOf(.days)))
         
         if !events.isEmpty {
             DispatchQueue.main.async { [unowned self] in
@@ -293,6 +320,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate, EventStore
 extension MenuController {
     func calendarViewController(viewController: CalendarViewController, didRequestSelectedTime time: Moment) {
         selectedTime = time
+        print("\(time) was selected")
     }
     
     func calendarViewController(viewController: CalendarViewController, didRequestMonthChange addMonths: Int) {
@@ -306,19 +334,7 @@ extension MenuController {
     func calendarViewControllerDidRequestSelectedTimeToNow(viewController: CalendarViewController) {
         selectedTime = Clock.shared.currentTick
     }
-    
-    func receivedAccessToEvents() {
-        updateEventItems()
-    }
-    
-    func wasDeniedAccessToEvents() {
         
-    }
-    
-    func receivedErrorRequestingAccessToEvents(error: Error) {
-        
-    }
-    
     func menuWillOpen(_ menu: NSMenu) {
         menuIsOpen = true
         updateEventItems()

@@ -2,6 +2,24 @@
   "object": {
     "pins": [
       {
+        "package": "Preferences",
+        "repositoryURL": "https://github.com/sindresorhus/Preferences",
+        "state": {
+          "branch": "master",
+          "revision": "9da487dfa252ce3203372bbd87dade0f8de1de1f",
+          "version": null
+        }
+      },
+      {
+        "package": "QJColorChooser",
+        "repositoryURL": "https://github.com/MikeManzo/QJColorChooser",
+        "state": {
+          "branch": "master",
+          "revision": "5d7515c669f22af22be86242b2b2dc3b4adf01e3",
+          "version": null
+        }
+      },
+      {
         "package": "SwiftMoment",
         "repositoryURL": "https://github.com/akosma/SwiftMoment.git",
         "state": {

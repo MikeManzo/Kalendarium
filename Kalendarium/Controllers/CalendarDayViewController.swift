@@ -20,7 +20,6 @@ class CalendarDayViewController: NSViewController {
         guard let retView = view as? CalendarDayButton else {
             return nil
         }
-        
         return retView
     }
 

@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCalendarsUsageDescription</key>
-	<string>$(PRODUCT_NAME) whould like to show information about your calendar events. You can change this later via System Preferences--&gt;Security &amp; Privacy.</string>
-	<key>LSUIElement</key>
-	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -24,8 +20,14 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.lifestyle</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>$(PRODUCT_NAME) whould like to show information about your calendar events. You can change this later via System Preferences--&gt;Security &amp; Privacy.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 Mike Manzo. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
