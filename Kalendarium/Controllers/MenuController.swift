@@ -12,11 +12,6 @@ import Preferences
 import SwiftMoment
 import SwiftyUserDefaults
 
-extension NSColor: DefaultsSerializable { }
-extension DefaultsKeys {
-    var menuBarCalendarColor: DefaultsKey<NSColor> { return .init("Defaults", defaultValue: NSColor.red) }
-}
-
 extension PreferencePane.Identifier {
     static let calendar = Identifier("calendar")
     static let general = Identifier("general")
@@ -56,7 +51,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
 
     /**
      Event Items to display
-     Add them to the 6th position
+     Add them to the 6th position in the menu
          
      - Returns: Nothing
      */
@@ -85,7 +80,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
         appBarItem.button?.target = self                // Make sure we recieve all actions
         appBarItem.menu = mainMenu                      // Attach the menu to the appBar
 
-        Clock.shared.onChange(quantum: .minute) { [weak self] time in
+        Clock.shared.onChange(quantum: .minute) { [weak self] time in   // Let's check the calendar every minute ... low maintenance
             DispatchQueue.main.async {
                 self?.updateMenuBar()
                 self?.calendarViewController?.updateCalendar(currentTime: time, selectedTime: self!.selectedTime)
@@ -305,7 +300,8 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
             //                eventItems.append(NSMenuItem(title: "Show \(events.count - 4) more", action: #selector(self.showAllEvents), keyEquivalent: ""))
             //            }
         } else {
-            eventItems = []
+//            eventItems = []
+            eventItems.removeAll()
         }
     }
 }

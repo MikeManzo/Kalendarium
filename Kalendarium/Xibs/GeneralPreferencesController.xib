@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <subviews>
                 <gridView fixedFrame="YES" xPlacement="center" yPlacement="center" rowAlignment="none" rowSpacing="8" columnSpacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OXO-9J-uVL">
-                    <rect key="frame" x="20" y="174" width="424" height="78"/>
+                    <rect key="frame" x="20" y="172" width="421" height="80"/>
                     <rows>
                         <gridRow id="4qf-1c-hXF"/>
                         <gridRow id="RtG-ge-02E"/>
@@ -35,7 +35,7 @@
                     <gridCells>
                         <gridCell row="4qf-1c-hXF" column="6Xo-XK-twR" xPlacement="trailing" id="swJ-Qg-yex">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o5i-8a-SF1">
-                                <rect key="frame" x="-2" y="55" width="98" height="16"/>
+                                <rect key="frame" x="-2" y="56" width="98" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Menubar Color:" id="0PV-Bm-A3Y">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -44,16 +44,38 @@
                             </textField>
                         </gridCell>
                         <gridCell row="4qf-1c-hXF" column="rfl-LH-HEt" xPlacement="leading" id="9rp-EF-XQ4">
-                            <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="J9l-Ej-m0X" customClass="QJColorChooser" customModule="QJColorChooser">
-                                <rect key="frame" x="104" y="48" width="100" height="30"/>
-                            </customView>
+                            <gridView key="contentView" xPlacement="leading" yPlacement="bottom" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="3xe-7s-syG">
+                                <rect key="frame" x="104" y="48" width="70" height="32"/>
+                                <constraints>
+                                    <constraint firstItem="xT1-tU-Ifn" firstAttribute="top" secondItem="3xe-7s-syG" secondAttribute="top" constant="2" id="NBd-4r-w7K"/>
+                                    <constraint firstItem="xT1-tU-Ifn" firstAttribute="leading" secondItem="J9l-Ej-m0X" secondAttribute="trailing" constant="6" id="kf4-6R-Nmy"/>
+                                </constraints>
+                                <rows>
+                                    <gridRow height="32" id="mVH-7o-84F"/>
+                                </rows>
+                                <columns>
+                                    <gridColumn width="32" id="g8z-sF-rLZ"/>
+                                    <gridColumn width="32" id="kLB-WF-b2D"/>
+                                </columns>
+                                <gridCells>
+                                    <gridCell row="mVH-7o-84F" column="g8z-sF-rLZ" xPlacement="leading" yPlacement="top" id="mQh-vr-ffq">
+                                        <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="J9l-Ej-m0X" customClass="QJColorChooser" customModule="QJColorChooser">
+                                            <rect key="frame" x="0.0" y="2" width="32" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="4Lh-Y1-WZd"/>
+                                            </constraints>
+                                        </customView>
+                                    </gridCell>
+                                    <gridCell row="mVH-7o-84F" column="kLB-WF-b2D" id="GfV-Ka-rh0">
+                                        <imageView key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xT1-tU-Ifn">
+                                            <rect key="frame" x="38" y="0.0" width="32" height="30"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="WM1-K1-McL"/>
+                                        </imageView>
+                                    </gridCell>
+                                </gridCells>
+                            </gridView>
                         </gridCell>
-                        <gridCell row="4qf-1c-hXF" column="m6x-ap-nsg" xPlacement="leading" id="hkW-OX-x6i">
-                            <imageView key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xT1-tU-Ifn">
-                                <rect key="frame" x="214" y="48" width="100" height="30"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="WM1-K1-McL"/>
-                            </imageView>
-                        </gridCell>
+                        <gridCell row="4qf-1c-hXF" column="m6x-ap-nsg" xPlacement="leading" id="hkW-OX-x6i"/>
                         <gridCell row="4qf-1c-hXF" column="z7d-XU-SY0" id="hrR-lr-xsE"/>
                         <gridCell row="RtG-ge-02E" column="6Xo-XK-twR" xPlacement="trailing" id="PqC-bB-Y0P">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0jr-2B-ChB">

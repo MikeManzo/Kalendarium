@@ -6,7 +6,10 @@
 //  Copyright © 2019 Mike Manzo. All rights reserved.
 //
 
+import SwiftyUserDefaults
 import Cocoa
+
+extension NSColor: DefaultsSerializable { }
 
 extension NSColor {
     static let highlightForeground = NSColor(named: NSColor.Name("highlightForeground"))!
@@ -15,5 +18,4 @@ extension NSColor {
     static let disabledText = NSColor(named: NSColor.Name("disabledText"))!
     static let primaryText = NSColor(named: NSColor.Name("primaryText"))!
     static let accent = NSColor(named: NSColor.Name("accent"))!
-    static let dayHoverHighlight = NSColor.blue
 }

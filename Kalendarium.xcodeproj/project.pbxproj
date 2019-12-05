@@ -21,6 +21,7 @@
 		274A5C5C238053A00019619C /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5B238053A00019619C /* NSDate+Extension.swift */; };
 		274A5C5E238054310019619C /* CustomMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5D238054310019619C /* CustomMenuItemView.swift */; };
 		274ED1F52395844F000D2581 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED1F42395844F000D2581 /* Error.swift */; };
+		2772885E2397EA0D005A64F7 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2772885D2397EA0D005A64F7 /* Defaults.swift */; };
 		277D66CB23843411007E311F /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 277D66CA23843411007E311F /* Preferences */; };
 		277D66CF23846F0E007E311F /* GeneralPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D66CD23846F0E007E311F /* GeneralPreferencesController.swift */; };
 		277D66D023846F0E007E311F /* GeneralPreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277D66CE23846F0E007E311F /* GeneralPreferencesController.xib */; };
@@ -80,6 +81,7 @@
 		274A5C5B238053A00019619C /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		274A5C5D238054310019619C /* CustomMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuItemView.swift; sourceTree = "<group>"; };
 		274ED1F42395844F000D2581 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		2772885D2397EA0D005A64F7 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = Kalendarium/Models/Defaults.swift; sourceTree = SOURCE_ROOT; };
 		277D66CD23846F0E007E311F /* GeneralPreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesController.swift; sourceTree = "<group>"; };
 		277D66CE23846F0E007E311F /* GeneralPreferencesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferencesController.xib; sourceTree = "<group>"; };
 		277D66D123846F47007E311F /* CalendarPreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPreferencesController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				2791B7FA237B2ABC009E506E /* Clock.swift */,
 				2791B7F8237B2661009E506E /* DesignFacts.swift */,
+				2772885D2397EA0D005A64F7 /* Defaults.swift */,
 				2705E057237F67F800CF013C /* EventStore.swift */,
 				274ED1F42395844F000D2581 /* Error.swift */,
 			);
@@ -449,6 +452,7 @@
 				270F2FEC23772E16006B78A7 /* AppDelegate.swift in Sources */,
 				274A5C5C238053A00019619C /* NSDate+Extension.swift in Sources */,
 				2791B7FE237B2E12009E506E /* Moment+Extension.swift in Sources */,
+				2772885E2397EA0D005A64F7 /* Defaults.swift in Sources */,
 				27EA6A92238985CF006F6514 /* NSImage+Extension.swift in Sources */,
 				2791B807237B3341009E506E /* CalendarDayButton.swift in Sources */,
 				270F301923776036006B78A7 /* CalendarView.swift in Sources */,

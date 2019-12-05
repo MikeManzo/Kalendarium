@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SwiftyUserDefaults
 
 enum DayViewState {
     case outOfMonth
@@ -57,7 +58,7 @@ class CalendarDayButton: NSButton {
     func refreshAppearance() {
         switch viewState {
         case .selected:
-            layer?.backgroundColor = NSColor.accent.cgColor
+            layer?.backgroundColor = Defaults.dayHighlightColor.cgColor
             attributedTitle = getStringWithColor(string: label, color: .primaryTextInvert)
         case .today:
             layer?.backgroundColor = NSColor.highlightBackground.cgColor
@@ -66,7 +67,7 @@ class CalendarDayButton: NSButton {
             layer?.backgroundColor = NSColor.clear.cgColor
             attributedTitle = getStringWithColor(string: label, color: .disabledText)
         case .hover:
-            layer?.backgroundColor = NSColor.dayHoverHighlight.cgColor
+            layer?.backgroundColor = Defaults.dayHoverHighlightColor.cgColor
             attributedTitle = getStringWithColor(string: label, color: .primaryTextInvert)
         default:
             layer?.backgroundColor = NSColor.clear.cgColor
