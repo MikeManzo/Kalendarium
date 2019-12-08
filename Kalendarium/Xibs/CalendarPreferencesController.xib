@@ -20,7 +20,7 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="QuA-fo-W9H">
                     <rect key="frame" x="18" y="236" width="444" height="16"/>
                     <autoresizingMask key="autoresizingMask"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Show Events and reminders from these calendars:" id="VyF-F5-942">
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Show Events and Reminders from the following:" id="VyF-F5-942">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -42,7 +42,7 @@
                                 <tableColumns>
                                     <tableColumn width="435" minWidth="40" maxWidth="1000" id="U7n-ac-DTX">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                            <font key="font" metaFont="controlContent" size="11"/>
+                                            <font key="font" metaFont="menu" size="11"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                         </tableHeaderCell>
@@ -61,7 +61,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="435" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" sendsActionOnEndEditing="YES" title="Calendar Source" id="l8i-VS-qHa">
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="system" size="14"/>
                                                             <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -91,6 +91,9 @@
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
+                                                        <connections>
+                                                            <action selector="calendarSelected:" target="SyC-5b-xhX" id="SxM-KY-bbK"/>
+                                                        </connections>
                                                     </button>
                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pG8-CK-zbC">
                                                         <rect key="frame" x="46" y="-4" width="24" height="24"/>

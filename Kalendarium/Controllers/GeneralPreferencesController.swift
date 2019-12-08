@@ -13,13 +13,13 @@ import QJColorChooser
 import SwiftyUserDefaults
 
 class GeneralPreferencesController: NSViewController, QJColorButtonDelegate, PreferencePane {
-    let toolbarItemIcon = NSImage(named: NSImage.preferencesGeneralName)!
-    let preferencePaneIdentifier = PreferencePane.Identifier.general
-    let preferencePaneTitle = "General"
-    
     @IBOutlet weak var calendarIcon: NSImageView!
     @IBOutlet weak var calendarColorView: QJColorChooser!
     @IBOutlet weak var calendarList: NSPopUpButton!
+
+    let toolbarItemIcon = NSImage(named: NSImage.preferencesGeneralName)!
+    let preferencePaneIdentifier = PreferencePane.Identifier.general
+    let preferencePaneTitle = "General"
     
     override var nibName: NSNib.Name? { "GeneralPreferencesController" }
     

@@ -9,6 +9,7 @@
 import Cocoa
 import EventKit
 import Preferences
+import SwiftyUserDefaults
 
 class CalendarPreferencesController: NSViewController, PreferencePane {
     @IBOutlet weak var calendarTable: NSTableView!
@@ -27,10 +28,6 @@ class CalendarPreferencesController: NSViewController, PreferencePane {
         setupCalendars()
     }
     
-    override func viewWillAppear() {
-        calendarTable.reloadData()
-    }
-
     /**
     Setup the data source for the table.  We want an array that has two types, String and EKCalendar.
      We can then use the object type to format the table row
@@ -95,8 +92,14 @@ extension CalendarPreferencesController: NSTableViewDataSource, NSTableViewDeleg
             view = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CalendarView"), owner: self) as? CalendarDetailView
             if view != nil {
                 let calendar = tableData[row] as? EKCalendar
-                (view as? CalendarDetailView)?.name.stringValue = (calendar?.title)!
                 (view as? CalendarDetailView)?.color.image = NSImage(withRadius: 10.0, color: (calendar?.color)!)
+                (view as? CalendarDetailView)?.name.stringValue = (calendar?.title)!
+                (view as? CalendarDetailView)?.uuID = (calendar?.calendarIdentifier)!
+                
+                if Defaults.calendarsToDisplay.firstIndex(of: (calendar?.calendarIdentifier)!) != nil {
+//                    print("Name:\((calendar?.title)!), Row: \(row), ID:\(calendar?.calendarIdentifier ?? "")!)")
+                    (view as? CalendarDetailView)?.check.state = .on
+                }
             } else {
                 print("Error")
             }
@@ -140,4 +143,23 @@ class CalendarDetailView: NSTableCellView {
     @IBOutlet weak var check: NSButton!
     @IBOutlet weak var color: NSImageView!
     @IBOutlet weak var name: NSTextField!
+    
+    var uuID: String = ""
+    
+    @IBAction func calendarSelected(_ sender: NSButton) {
+        switch sender.state {
+        case .on:
+            Defaults.calendarsToDisplay.append(uuID)
+//            print("Added:\(uuID)")
+        case .off:
+            if let index = Defaults.calendarsToDisplay.firstIndex(of: uuID) {
+                Defaults.calendarsToDisplay.remove(at: index)
+//                print("Removed:\(uuID)")
+            }
+        case .mixed:
+            break
+        default:
+            break
+        }
+    }
 }

@@ -14,4 +14,5 @@ extension DefaultsKeys {
     var dayHoverHighlightColor: DefaultsKey<NSColor> { return .init("Defaults", defaultValue: NSColor.blue) }
     var dayHighlightColor: DefaultsKey<NSColor> { return .init("Defaults", defaultValue: .accent) }
     var defaultCalendar: DefaultsKey<String> { return .init("Defaults", defaultValue: "") }
+    var calendarsToDisplay: DefaultsKey<[String]> { return .init("Defaults", defaultValue: []) }
 }
