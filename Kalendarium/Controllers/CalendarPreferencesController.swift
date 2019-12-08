@@ -161,5 +161,6 @@ class CalendarDetailView: NSTableCellView {
         default:
             break
         }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateCalendarsToDisplay"), object: nil, userInfo: nil)
     }
 }

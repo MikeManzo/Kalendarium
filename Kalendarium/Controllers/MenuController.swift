@@ -23,7 +23,6 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
     var calendarViewController: CalendarViewController?
     var highlightedEvent: EventMenuItemViewController?
     let eventItemSeperator = NSMenuItem.separator()
-//    var eventStore = EventStore()
     var events: [EKEvent] = []
     let mainMenu = NSMenu()
     var menuIsOpen = false
@@ -87,14 +86,21 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
             }
         }
         
-        /// Setup a call-forward listener for anyone to tell the controller that the computer is going to sleep
+        /// Setup a call-forward listener for anyone to tell the controller that the color of the MenuBar item has changed
          NotificationCenter.default.addObserver(self, selector: #selector(menuBarColorUpdate(sender:)), name: NSNotification.Name(rawValue: "UpdateMenuBarColor"), object: nil)
+
+        /// Setup a call-forward listener for anyone to tell the controller that the calanders to be displayed has changed
+         NotificationCenter.default.addObserver(self, selector: #selector(displayCalendarUpdate(sender:)), name: NSNotification.Name(rawValue: "UpdateCalendarsToDisplay"), object: nil)
     }
     
     @objc func menuBarColorUpdate(sender: AnyObject) {
         updateMenuBar()
     }
 
+    @objc func displayCalendarUpdate(sender: AnyObject) {
+        setupEvents()
+    }
+    
     // MARK: IBActions from the Menu
     /**
      Display the abaout window
@@ -234,7 +240,6 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
             ctx.drawPath(using: .fillStroke)
         }
         
-//        return drawTextOnImage(text: String(moment().day), image: img)
         return img.drawCenteredText(text: String(moment().day), size: 12, offset: 4)
     }
     
@@ -294,7 +299,10 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
      - Returns: Nothing
      */
     private func updateEventItems() {
-        events = (EventStore.shared.getEventsForDay(endingAfter: selectedTime.startOf(.days)))
+        events.removeAll()
+        eventItems.removeAll()
+        
+        events = (EventStore.shared.getEventsForDay(endingAfter: selectedTime.startOf(.days), in: Defaults.calendarsToDisplay))
         
         if !events.isEmpty {
             DispatchQueue.main.async { [unowned self] in
@@ -302,12 +310,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
                     return EventMenuItemViewController(event: event)
                 }
             }
-            
-            //            if events.count > 4 {
-            //                eventItems.append(NSMenuItem(title: "Show \(events.count - 4) more", action: #selector(self.showAllEvents), keyEquivalent: ""))
-            //            }
         } else {
-//            eventItems = []
             eventItems.removeAll()
         }
     }
