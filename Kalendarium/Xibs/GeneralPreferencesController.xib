@@ -20,22 +20,24 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <subviews>
                 <gridView fixedFrame="YES" xPlacement="center" yPlacement="center" rowAlignment="none" rowSpacing="8" columnSpacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OXO-9J-uVL">
-                    <rect key="frame" x="20" y="172" width="421" height="80"/>
+                    <rect key="frame" x="20" y="105" width="481" height="147"/>
                     <rows>
                         <gridRow id="4qf-1c-hXF"/>
                         <gridRow id="RtG-ge-02E"/>
                         <gridRow id="Z8c-KW-D11"/>
+                        <gridRow id="Df8-tm-Ntj"/>
+                        <gridRow id="vNs-we-SxR"/>
                     </rows>
                     <columns>
                         <gridColumn id="6Xo-XK-twR"/>
-                        <gridColumn id="rfl-LH-HEt"/>
+                        <gridColumn width="152" id="rfl-LH-HEt"/>
                         <gridColumn id="m6x-ap-nsg"/>
                         <gridColumn id="z7d-XU-SY0"/>
                     </columns>
                     <gridCells>
                         <gridCell row="4qf-1c-hXF" column="6Xo-XK-twR" xPlacement="trailing" id="swJ-Qg-yex">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o5i-8a-SF1">
-                                <rect key="frame" x="-2" y="56" width="98" height="16"/>
+                                <rect key="frame" x="3" y="123" width="98" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Menubar Color:" id="0PV-Bm-A3Y">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -45,7 +47,7 @@
                         </gridCell>
                         <gridCell row="4qf-1c-hXF" column="rfl-LH-HEt" xPlacement="leading" id="9rp-EF-XQ4">
                             <gridView key="contentView" xPlacement="leading" yPlacement="bottom" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="3xe-7s-syG">
-                                <rect key="frame" x="104" y="48" width="70" height="32"/>
+                                <rect key="frame" x="109" y="115" width="70" height="32"/>
                                 <constraints>
                                     <constraint firstItem="xT1-tU-Ifn" firstAttribute="top" secondItem="3xe-7s-syG" secondAttribute="top" constant="2" id="NBd-4r-w7K"/>
                                     <constraint firstItem="xT1-tU-Ifn" firstAttribute="leading" secondItem="J9l-Ej-m0X" secondAttribute="trailing" constant="6" id="kf4-6R-Nmy"/>
@@ -79,7 +81,7 @@
                         <gridCell row="4qf-1c-hXF" column="z7d-XU-SY0" id="hrR-lr-xsE"/>
                         <gridCell row="RtG-ge-02E" column="6Xo-XK-twR" xPlacement="trailing" id="PqC-bB-Y0P">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0jr-2B-ChB">
-                                <rect key="frame" x="55" y="24" width="41" height="16"/>
+                                <rect key="frame" x="60" y="91" width="41" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Login:" id="G9g-5o-kdv">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -89,7 +91,7 @@
                         </gridCell>
                         <gridCell row="RtG-ge-02E" column="rfl-LH-HEt" xPlacement="leading" id="y34-Nf-hzB">
                             <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bio-pq-0Mx">
-                                <rect key="frame" x="102" y="23" width="101" height="18"/>
+                                <rect key="frame" x="107" y="90" width="101" height="18"/>
                                 <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CiG-pn-shj">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -100,7 +102,7 @@
                         <gridCell row="RtG-ge-02E" column="z7d-XU-SY0" id="kCw-gq-juj"/>
                         <gridCell row="Z8c-KW-D11" column="6Xo-XK-twR" xPlacement="trailing" id="Xht-Ua-YY5">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h2l-GR-AQL">
-                                <rect key="frame" x="37" y="0.0" width="59" height="16"/>
+                                <rect key="frame" x="42" y="67" width="59" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Updates:" id="J0E-jJ-Y8i">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -110,7 +112,7 @@
                         </gridCell>
                         <gridCell row="Z8c-KW-D11" column="rfl-LH-HEt" xPlacement="leading" id="JIc-J9-40g">
                             <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2d1-Nt-oo0">
-                                <rect key="frame" x="102" y="-1" width="93" height="18"/>
+                                <rect key="frame" x="107" y="66" width="93" height="18"/>
                                 <buttonCell key="cell" type="check" title="Check daily" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Abx-Ft-Amj">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -119,17 +121,40 @@
                         </gridCell>
                         <gridCell row="Z8c-KW-D11" column="m6x-ap-nsg" id="dxv-r9-GtY"/>
                         <gridCell row="Z8c-KW-D11" column="z7d-XU-SY0" id="Qya-g1-EAI"/>
+                        <gridCell row="Df8-tm-Ntj" column="6Xo-XK-twR" id="eCq-aI-drU">
+                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JNu-du-kWE">
+                                <rect key="frame" x="-2" y="41" width="103" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Defult Calendar:" id="l6M-IZ-Jbj">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </gridCell>
+                        <gridCell row="Df8-tm-Ntj" column="rfl-LH-HEt" xPlacement="leading" yPlacement="center" id="WDw-Zm-Fgz">
+                            <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uPT-1w-Usp">
+                                <rect key="frame" x="107" y="35" width="145" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="U0m-Sy-06M"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="lXg-hl-1dG">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" autoenablesItems="NO" id="Dyl-WE-ul8"/>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="defaultCalendarChanged:" target="-2" id="4Gb-fn-158"/>
+                                </connections>
+                            </popUpButton>
+                        </gridCell>
+                        <gridCell row="Df8-tm-Ntj" column="m6x-ap-nsg" id="zNB-kA-GDi"/>
+                        <gridCell row="Df8-tm-Ntj" column="z7d-XU-SY0" id="rZE-NE-uaf"/>
+                        <gridCell row="vNs-we-SxR" column="6Xo-XK-twR" id="XIQ-sU-Ye6"/>
+                        <gridCell row="vNs-we-SxR" column="rfl-LH-HEt" id="jP6-3v-6Nh"/>
+                        <gridCell row="vNs-we-SxR" column="m6x-ap-nsg" id="Wqo-s9-yD0"/>
+                        <gridCell row="vNs-we-SxR" column="z7d-XU-SY0" id="cU9-He-e5B"/>
                     </gridCells>
                 </gridView>
-                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPT-1w-Usp">
-                    <rect key="frame" x="18" y="41" width="146" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="lXg-hl-1dG">
-                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                        <menu key="menu" autoenablesItems="NO" id="Dyl-WE-ul8"/>
-                    </popUpButtonCell>
-                </popUpButton>
             </subviews>
             <point key="canvasLocation" x="139" y="154"/>
         </customView>

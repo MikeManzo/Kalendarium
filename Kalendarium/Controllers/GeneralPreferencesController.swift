@@ -27,7 +27,25 @@ class GeneralPreferencesController: NSViewController, QJColorButtonDelegate, Pre
         super.viewDidLoad()
         
         preferredContentSize = NSSize(width: 480, height: 272)      // Set the size of our view
+        calendarIcon.image = createMenuBarIcon()
+
+        setupCalendarColorView()
+        setupCalendarSelector()
         
+        let items = calendarList.itemArray
+        if let menuItem = items.first(where: { ($0.representedObject as? String) == Defaults.defaultCalendar }) {
+            calendarList.select(menuItem)
+        }
+    }
+
+    /**
+     Setup the color selector for the calandar icon in the menubar
+     
+     - Parameters (none):
+     
+     - Returns: None
+     */
+    private func setupCalendarColorView() {
         calendarColorView.selectedMenuItemColor = Defaults.menuBarCalendarColor
         calendarColorView.selectedMenuItemTextColor = NSColor.black
         calendarColorView.selectedBoxColor = Defaults.menuBarCalendarColor
@@ -37,43 +55,51 @@ class GeneralPreferencesController: NSViewController, QJColorButtonDelegate, Pre
         calendarColorView.darkMode = true
         calendarColorView.delegate = self
         calendarColorView.boxWidth = 30
-
-        calendarIcon.image = createMenuBarIcon()
-
-        let item = NSMenuItem()
-        item.title = "Calendar A"
-        item.isEnabled = false
-        calendarList.menu?.addItem(item)
+    }
+    
+    @IBAction func defaultCalendarChanged(_ sender: NSPopUpButton) {
+        guard let uuID = sender.selectedItem?.representedObject as? String else {
+            return
+        }
+        Defaults.defaultCalendar = uuID
+    }
+    
+    /**
+     Load the calendars into the calendar list; sorting alphabetically first
+     Caledar source first, then actuall calendar
+     
+     - Parameters (none):
+     
+     - Returns: None
+     */
+    private func setupCalendarSelector() {
+        let sortedcalendars = EventStore.shared.getCalendars()?.sorted { $0.source.title.localizedCaseInsensitiveCompare($1.source.title) == ComparisonResult.orderedAscending }
+        var formerSource = ""
         
-        let item2 = NSMenuItem()
-        item2.image = NSImage(withRadius: 10.0, color: .blue)
-        item2.title = "Chris"
-        calendarList.menu?.addItem(item2)
-
-        let item3 = NSMenuItem()
-        item3.image = NSImage(withRadius: 10.0, color: .green)
-        item3.title = "Mike"
-        calendarList.menu?.addItem(item3)
-
-        let item4 = NSMenuItem.separator()
-        calendarList.menu?.addItem(item4)
-
-        let item5 = NSMenuItem()
-        item5.title = "Calendar B"
-        item5.isEnabled = false
-        calendarList.menu?.addItem(item5)
-        
-        let item6 = NSMenuItem()
-        item6.image = NSImage(withRadius: 10.0, color: .purple)
-        item6.title = "Chris"
-        calendarList.menu?.addItem(item6)
-
-        let item7 = NSMenuItem()
-        item7.image = NSImage(withRadius: 10.0, color: .orange)
-        item7.title = "Mike"
-        calendarList.menu?.addItem(item7)
-        
-        calendarList.select(item2)
+        sortedcalendars?.forEach { calendar in
+            if calendar.source.title != formerSource { // New Calendar Source + Calendar
+                let item = NSMenuItem()
+                item.title = calendar.source.title
+                item.isEnabled = false
+                item.representedObject = calendar.title
+                calendarList.menu?.addItem(item)
+                
+                let item2 = NSMenuItem()
+                item2.image = NSImage(withRadius: 10.0, color: calendar.color)
+                item2.title = calendar.title
+                item2.representedObject = calendar.calendarIdentifier
+                calendarList.menu?.addItem(item2)
+                
+                formerSource = calendar.source.title
+            } else { // Jusrt the Calendar
+                let item = NSMenuItem()
+                item.image = NSImage(withRadius: 10.0, color: calendar.color)
+                item.title = calendar.title
+                item.representedObject = calendar.calendarIdentifier
+                calendarList.menu?.addItem(item)
+                formerSource = calendar.source.title
+            }
+        }
     }
     
     /**

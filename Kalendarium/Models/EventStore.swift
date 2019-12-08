@@ -14,6 +14,7 @@ class EventStore {
         return EventStore()
     }()
 
+    private let stringTypes = ["Local","Exchange","CalDAV","MobileMe","Subscribed","Birthdays"]
     private let backingStore = EKEventStore()
     
     public var isAuthorized: Bool {
@@ -42,5 +43,9 @@ class EventStore {
             return nil
         }
         return backingStore.calendars(for: .event)
+    }
+    
+    public func getCalendarType(type: EKSourceType) -> String {
+        return stringTypes[type.rawValue]
     }
 }
