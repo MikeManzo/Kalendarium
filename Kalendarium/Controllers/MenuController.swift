@@ -86,8 +86,15 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
                 self?.calendarViewController?.updateCalendar(currentTime: time, selectedTime: self!.selectedTime)
             }
         }
-    }
         
+        /// Setup a call-forward listener for anyone to tell the controller that the computer is going to sleep
+         NotificationCenter.default.addObserver(self, selector: #selector(menuBarColorUpdate(sender:)), name: NSNotification.Name(rawValue: "UpdateMenuBarColor"), object: nil)
+    }
+    
+    @objc func menuBarColorUpdate(sender: AnyObject) {
+        updateMenuBar()
+    }
+
     // MARK: IBActions from the Menu
     /**
      Display the abaout window

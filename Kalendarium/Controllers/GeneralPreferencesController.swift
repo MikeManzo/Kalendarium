@@ -134,5 +134,6 @@ extension GeneralPreferencesController {
     func colorSelected(_ sender: QJColorChooser, color: NSColor) {
         Defaults.menuBarCalendarColor = color
         calendarIcon.image = createMenuBarIcon()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateMenuBarColor"), object: nil, userInfo: nil)
     }
 }
