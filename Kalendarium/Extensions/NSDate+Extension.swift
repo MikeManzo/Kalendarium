@@ -43,7 +43,7 @@ extension Date {
     
     func monthDayYear() -> String {
         let format = DateFormatter()
-        format.dateFormat = "yyyy-MM-dd"
+        format.dateFormat = "MM-dd-yy"
         return format.string(from: self)
     }
     
