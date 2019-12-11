@@ -41,6 +41,12 @@ extension Date {
         return DateFormatters.shared.date.string(from: date)
     }
     
+    func monthDayYear() -> String {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy-MM-dd"
+        return format.string(from: self)
+    }
+    
     func dayOfTheWeek() -> String {
         return "\(DateFormatters.shared.dayOfWeek.string(from: self))"
     }

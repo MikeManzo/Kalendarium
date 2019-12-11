@@ -42,6 +42,7 @@
 		2792F411237A1C4C00CAF8F6 /* CalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792F410237A1C4C00CAF8F6 /* CalendarGrid.swift */; };
 		27BB4F6923A02EDB00BFE387 /* DayMenuItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB4F6723A02EDB00BFE387 /* DayMenuItemController.swift */; };
 		27BB4F6A23A02EDB00BFE387 /* DayMenuItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27BB4F6823A02EDB00BFE387 /* DayMenuItemController.xib */; };
+		27BB4F6C23A1491D00BFE387 /* NSView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB4F6B23A1491D00BFE387 /* NSView+Extension.swift */; };
 		27EA6A92238985CF006F6514 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA6A91238985CF006F6514 /* NSImage+Extension.swift */; };
 		27EAFF1D238C620D00AF0B58 /* QJColorChooser in Frameworks */ = {isa = PBXBuildFile; productRef = 27EAFF1C238C620D00AF0B58 /* QJColorChooser */; };
 /* End PBXBuildFile section */
@@ -103,6 +104,7 @@
 		2792F410237A1C4C00CAF8F6 /* CalendarGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGrid.swift; sourceTree = "<group>"; };
 		27BB4F6723A02EDB00BFE387 /* DayMenuItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMenuItemController.swift; sourceTree = "<group>"; };
 		27BB4F6823A02EDB00BFE387 /* DayMenuItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayMenuItemController.xib; sourceTree = "<group>"; };
+		27BB4F6B23A1491D00BFE387 /* NSView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Extension.swift"; sourceTree = "<group>"; };
 		27EA6A91238985CF006F6514 /* NSImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +252,7 @@
 				274A5C5B238053A00019619C /* NSDate+Extension.swift */,
 				27EA6A91238985CF006F6514 /* NSImage+Extension.swift */,
 				2791B7FD237B2E12009E506E /* Moment+Extension.swift */,
+				27BB4F6B23A1491D00BFE387 /* NSView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				2792F40F2379D4AA00CAF8F6 /* CalendarViewController.swift in Sources */,
 				277D66CF23846F0E007E311F /* GeneralPreferencesController.swift in Sources */,
 				274A5C5E238054310019619C /* CustomMenuItemView.swift in Sources */,
+				27BB4F6C23A1491D00BFE387 /* NSView+Extension.swift in Sources */,
 				2792F40D2379C8BA00CAF8F6 /* MenuController.swift in Sources */,
 				2705E058237F67F800CF013C /* EventStore.swift in Sources */,
 				2791B7FB237B2ABC009E506E /* Clock.swift in Sources */,

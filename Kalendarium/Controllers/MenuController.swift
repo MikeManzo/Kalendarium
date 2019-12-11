@@ -82,7 +82,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
                 self.eventItems.enumerated().forEach {
                     let day = $0.element.theEvent.startDate.day()
                     if testDay != day { // Add the day + it's events
-                        let dayMenu = DayMenuItemController(title: $0.element.theEvent.startDate.fullDayOfTheWeek())
+                        let dayMenu = DayMenuItemController(title: "\($0.element.theEvent.startDate.fullDayOfTheWeek()):  \($0.element.theEvent.startDate.monthDayYear())")
                         position += 1
                         self.mainMenu.insertItem(dayMenu.menuItem, at: position)
                         
@@ -444,17 +444,4 @@ extension MenuController {
         }
     }
 */
-}
-
-extension NSView {
-    var parentViewController: NSViewController? {
-        var parentResponder: NSResponder? = self
-        while parentResponder != nil {
-            parentResponder = parentResponder?.nextResponder
-            if let viewController = parentResponder as? NSViewController {
-                return viewController
-            }
-        }
-        return nil
-    }
 }
