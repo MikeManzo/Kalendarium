@@ -56,6 +56,55 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
      */
     var eventItems: [EventMenuItemViewController] = [] {
         didSet {
+            DispatchQueue.main.async { [unowned self] in
+                oldValue.forEach { self.mainMenu.removeItem($0.menuItem) }
+                if !self.eventItems.isEmpty && oldValue.isEmpty {
+                    self.mainMenu.insertItem(self.eventItemSeperator, at: 6)
+                } else if self.eventItems.isEmpty && !oldValue.isEmpty {
+                    self.mainMenu.removeItem(self.eventItemSeperator)
+                 }
+                 
+                self.mainMenu.items.forEach { menuItem in
+                     switch menuItem.view?.parentViewController {
+                     case is DayMenuItemController:
+                        self.mainMenu.removeItem(menuItem)
+                     default:
+                         break
+                     }
+                 }
+
+                var position = 6
+                var testDay = Calendar.current.ordinality(of: .day, in: .month, for: Date())
+                
+                let dayMenu = DayMenuItemController(title: "Today")
+                self.mainMenu.insertItem(dayMenu.menuItem, at: position)
+                
+                self.eventItems.enumerated().forEach {
+                    let day = $0.element.theEvent.startDate.day()
+                    if testDay != day { // Add the day + it's events
+                        let dayMenu = DayMenuItemController(title: $0.element.theEvent.startDate.fullDayOfTheWeek())
+                        position += 1
+                        self.mainMenu.insertItem(dayMenu.menuItem, at: position)
+                        
+                        position += 1
+                        self.mainMenu.insertItem($0.element.menuItem, at: position)
+                        
+                        testDay = day
+                    } else {    // Just add teh events, we're within a day
+                        position += 1
+                        self.mainMenu.insertItem($0.element.menuItem, at: position)
+                    }
+                }
+                
+                // Add a separator ...
+                let sep = NSMenuItem.separator()
+                position += 1
+                self.mainMenu.insertItem(sep, at: position)
+            }
+        }
+    }
+/*    var eventItems: [EventMenuItemViewController] = [] {
+        didSet {
             oldValue.forEach { mainMenu.removeItem($0.menuItem) }
             if !eventItems.isEmpty && oldValue.isEmpty {
                 mainMenu.insertItem(eventItemSeperator, at: 6)
@@ -63,10 +112,27 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
                 mainMenu.removeItem(eventItemSeperator)
             }
 
-            eventItems.enumerated().forEach { mainMenu.insertItem($0.element.menuItem, at: 6 + $0.offset) }
+            // Testing
+            if !eventItems.isEmpty {
+                let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.lineBreakMode = .byTruncatingTail
+                let primaryAttributes: [NSAttributedString.Key: Any] = [
+                    .font: NSFont.systemFont(ofSize: 13),
+                    .paragraphStyle: paragraphStyle
+                ]
+                
+                let dayMenu = NSMenuItem()
+                dayMenu.attributedTitle = NSAttributedString(string: "Today", attributes: primaryAttributes)
+                mainMenu.insertItem(dayMenu, at: 6)
+            }
+            // Testing --> Change 7 + $0.offset to 6 + $0.offset
+
+            eventItems.enumerated().forEach {
+                mainMenu.insertItem($0.element.menuItem, at: 7 + $0.offset)
+            }
         }
     }
-    
+*/
     override init() {
         selectedTime = Clock.shared.currentTick
 
@@ -299,11 +365,27 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
      - Returns: Nothing
      */
     private func updateEventItems() {
+//        events.removeAll()
+//        eventItems.removeAll()
+        
+        events = (EventStore.shared.getEventsForRange(endingAfter: selectedTime.startOf(.days), daysForward: Defaults.eventDaysToDisplay, in: Defaults.calendarsToDisplay))
+
+        if !events.isEmpty {
+            DispatchQueue.main.async { [unowned self] in
+                self.eventItems = self.events.map { event in
+                    return EventMenuItemViewController(event: event)
+                }
+            }
+        } else {
+            eventItems.removeAll()
+        }
+    }
+/*    private func updateEventItems() {
         events.removeAll()
         eventItems.removeAll()
         
         events = (EventStore.shared.getEventsForDay(endingAfter: selectedTime.startOf(.days), in: Defaults.calendarsToDisplay))
-        
+
         if !events.isEmpty {
             DispatchQueue.main.async { [unowned self] in
                 self.eventItems = self.events[...min(self.events.count - 1, 3)].map { event in
@@ -314,6 +396,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
             eventItems.removeAll()
         }
     }
+*/
 }
 
 /**
@@ -350,7 +433,7 @@ extension MenuController {
     func menuDidClose(_ menu: NSMenu) {
         menuIsOpen = false
     }
-    
+/*
     func menu(_ menu: NSMenu, willHighlight item: NSMenuItem?) {
         if let prevController = highlightedEvent {
             prevController.unhighlight()
@@ -359,5 +442,19 @@ extension MenuController {
             controller.highlight()
             highlightedEvent = controller
         }
+    }
+*/
+}
+
+extension NSView {
+    var parentViewController: NSViewController? {
+        var parentResponder: NSResponder? = self
+        while parentResponder != nil {
+            parentResponder = parentResponder?.nextResponder
+            if let viewController = parentResponder as? NSViewController {
+                return viewController
+            }
+        }
+        return nil
     }
 }

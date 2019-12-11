@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EventMenuItemViewController" customModule="Kalendarium" customModuleProvider="target">
+            <connections>
+                <outlet property="eventColor" destination="kwE-vK-an8" id="mxf-qy-TeD"/>
+                <outlet property="eventTimeRange" destination="UP8-WZ-eax" id="EZw-a3-Utr"/>
+                <outlet property="eventTitle" destination="mjt-cn-Q6L" id="82x-st-aJn"/>
+                <outlet property="view" destination="XLi-bL-QJB" id="snm-tL-o1N"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="XLi-bL-QJB" customClass="CustomMenuItemView" customModule="Kalendarium" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="31"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-cn-Q6L">
+                    <rect key="frame" x="16" y="8" width="187" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="IeZ-As-Jx1">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-WZ-eax">
+                    <rect key="frame" x="199" y="8" width="105" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="101" id="Zfx-VS-kSf"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" alignment="right" title="Label" id="Bxb-mR-M88">
+                        <font key="font" size="10" name="HelveticaNeue"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="kwE-vK-an8">
+                    <rect key="frame" x="0.0" y="8" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="pSY-WT-YUI"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="UP8-WZ-eax" firstAttribute="baseline" secondItem="mjt-cn-Q6L" secondAttribute="firstBaseline" constant="1" id="1AC-MC-eit"/>
+                <constraint firstItem="UP8-WZ-eax" firstAttribute="leading" secondItem="mjt-cn-Q6L" secondAttribute="trailing" id="1lK-AL-DNu"/>
+                <constraint firstAttribute="height" constant="31" id="O9f-ER-zcS"/>
+                <constraint firstItem="mjt-cn-Q6L" firstAttribute="top" secondItem="UP8-WZ-eax" secondAttribute="top" constant="-1" id="fxa-lQ-Wcu"/>
+                <constraint firstItem="mjt-cn-Q6L" firstAttribute="leading" secondItem="kwE-vK-an8" secondAttribute="trailing" constant="2" id="gJK-8Z-eAN"/>
+                <constraint firstAttribute="width" constant="310" id="mNq-uW-Rk1"/>
+                <constraint firstAttribute="trailing" secondItem="UP8-WZ-eax" secondAttribute="trailing" constant="8" id="utv-IZ-Lvp"/>
+                <constraint firstItem="mjt-cn-Q6L" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="x9d-Og-EMO"/>
+            </constraints>
+            <point key="canvasLocation" x="149" y="-70.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+    </resources>
+</document>

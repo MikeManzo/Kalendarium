@@ -10,6 +10,53 @@ import Cocoa
 import EventKit
 
 class EventMenuItemViewController: NSViewController {
+    @IBOutlet weak var eventColor: NSImageView!
+    @IBOutlet weak var eventTitle: NSTextField!
+    @IBOutlet weak var eventTimeRange: NSTextField!
+    
+    let menuItem: NSMenuItem
+    let theEvent: EKEvent
+        
+    init(event: EKEvent) {
+        theEvent = event
+        menuItem = NSMenuItem(title: event.title, action: #selector(self.viewInCalendar(_:)), keyEquivalent: "")
+        menuItem.isEnabled = true
+       
+        super.init(nibName: "EventItemController", bundle: nil)
+        menuItem.view = view
+        menuItem.target = self
+    }
+    
+    override func mouseDown(with event: NSEvent) {
+        super.mouseDown(with: event)
+    }
+    
+    override func mouseUp(with event: NSEvent) {
+        super.mouseUp(with: event)
+
+        let menuIndex = (menuItem.menu?.index(of: menuItem))!
+        menuItem.menu?.performActionForItem(at: menuIndex)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        eventColor.image            = NSImage(withRadius: 6.0, color: theEvent.calendar.color)
+        eventTimeRange.stringValue  = "\(theEvent.startDate.time()) - \(theEvent.endDate.time())"
+        eventTitle.stringValue      = theEvent.title
+    }
+
+    @objc private func viewInCalendar(_ sender: NSMenuItem) {
+        print("\(sender.title) was selected")
+    }
+}
+
+/*
+class EventMenuItemViewController: NSViewController {
     let design = DesignFacts.defaultDesign.events
     var locationLabel: NSTextField?
     let titleLabel: NSTextField
@@ -94,7 +141,7 @@ class EventMenuItemViewController: NSViewController {
         dot.translatesAutoresizingMaskIntoConstraints = false
         dot.wantsLayer = true
         dot.layer?.backgroundColor = theEvent.calendar.color.cgColor
-        dot.layer?.cornerRadius = design.dotSize / 8
+        dot.layer?.cornerRadius = design.dotSize / 4
         view.addSubview(dot)
         dot.widthAnchor.constraint(equalToConstant: design.dotSize).isActive = true
         dot.heightAnchor.constraint(equalToConstant: design.dotSize).isActive = true
@@ -153,3 +200,4 @@ class EventMenuItemViewController: NSViewController {
         print("\(sender.title) was selected")
     }
 }
+*/

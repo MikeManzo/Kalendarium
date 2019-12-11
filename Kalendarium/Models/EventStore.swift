@@ -30,7 +30,7 @@ class EventStore {
         }
     }
 
-    public func getEventsForDay(endingAfter: Moment, in uuIDs: [String]?) -> [EKEvent] {
+    public func getEventsForRange(endingAfter: Moment,  daysForward: Int, in uuIDs: [String]?) -> [EKEvent] {
         if uuIDs!.isEmpty {
             return [EKEvent]()
         }
@@ -46,12 +46,12 @@ class EventStore {
             }
         }
         
-        return getEventsForDay(endingAfter: endingAfter, in: sortedSet)
+        return getEventsForRange(endingAfter: endingAfter, daysForward: daysForward, in: sortedSet)
     }
     
-    public func getEventsForDay(endingAfter: Moment, in calendars: [EKCalendar]? = nil) -> [EKEvent] {
+    public func getEventsForRange(endingAfter: Moment,  daysForward: Int, in calendars: [EKCalendar]? = nil) -> [EKEvent] {
         let calendars = calendars ?? backingStore.calendars(for: .event)
-        let eod = moment([endingAfter.year, endingAfter.month, endingAfter.day + 1, 0, 0, -1])!
+        let eod = moment([endingAfter.year, endingAfter.month, endingAfter.day + (daysForward), 0, 0, -1])!
         let predicate = backingStore.predicateForEvents(withStart: endingAfter.date, end: eod.date, calendars: calendars)
 
         return backingStore.events(matching: predicate)

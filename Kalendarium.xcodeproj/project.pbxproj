@@ -21,6 +21,7 @@
 		274A5C5C238053A00019619C /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5B238053A00019619C /* NSDate+Extension.swift */; };
 		274A5C5E238054310019619C /* CustomMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5D238054310019619C /* CustomMenuItemView.swift */; };
 		274ED1F52395844F000D2581 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED1F42395844F000D2581 /* Error.swift */; };
+		27510CFA239D77F900DC5708 /* EventItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27510CF9239D77F900DC5708 /* EventItemController.xib */; };
 		2772885E2397EA0D005A64F7 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2772885D2397EA0D005A64F7 /* Defaults.swift */; };
 		277D66CB23843411007E311F /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 277D66CA23843411007E311F /* Preferences */; };
 		277D66CF23846F0E007E311F /* GeneralPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D66CD23846F0E007E311F /* GeneralPreferencesController.swift */; };
@@ -39,6 +40,8 @@
 		2792F40D2379C8BA00CAF8F6 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792F40C2379C8BA00CAF8F6 /* MenuController.swift */; };
 		2792F40F2379D4AA00CAF8F6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792F40E2379D4AA00CAF8F6 /* CalendarViewController.swift */; };
 		2792F411237A1C4C00CAF8F6 /* CalendarGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792F410237A1C4C00CAF8F6 /* CalendarGrid.swift */; };
+		27BB4F6923A02EDB00BFE387 /* DayMenuItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB4F6723A02EDB00BFE387 /* DayMenuItemController.swift */; };
+		27BB4F6A23A02EDB00BFE387 /* DayMenuItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27BB4F6823A02EDB00BFE387 /* DayMenuItemController.xib */; };
 		27EA6A92238985CF006F6514 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA6A91238985CF006F6514 /* NSImage+Extension.swift */; };
 		27EAFF1D238C620D00AF0B58 /* QJColorChooser in Frameworks */ = {isa = PBXBuildFile; productRef = 27EAFF1C238C620D00AF0B58 /* QJColorChooser */; };
 /* End PBXBuildFile section */
@@ -81,6 +84,7 @@
 		274A5C5B238053A00019619C /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		274A5C5D238054310019619C /* CustomMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuItemView.swift; sourceTree = "<group>"; };
 		274ED1F42395844F000D2581 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		27510CF9239D77F900DC5708 /* EventItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventItemController.xib; sourceTree = "<group>"; };
 		2772885D2397EA0D005A64F7 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Defaults.swift; path = Kalendarium/Models/Defaults.swift; sourceTree = SOURCE_ROOT; };
 		277D66CD23846F0E007E311F /* GeneralPreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesController.swift; sourceTree = "<group>"; };
 		277D66CE23846F0E007E311F /* GeneralPreferencesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferencesController.xib; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		2792F40C2379C8BA00CAF8F6 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		2792F40E2379D4AA00CAF8F6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		2792F410237A1C4C00CAF8F6 /* CalendarGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGrid.swift; sourceTree = "<group>"; };
+		27BB4F6723A02EDB00BFE387 /* DayMenuItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMenuItemController.swift; sourceTree = "<group>"; };
+		27BB4F6823A02EDB00BFE387 /* DayMenuItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayMenuItemController.xib; sourceTree = "<group>"; };
 		27EA6A91238985CF006F6514 /* NSImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,7 +224,9 @@
 			isa = PBXGroup;
 			children = (
 				277D66D223846F47007E311F /* CalendarPreferencesController.xib */,
+				27BB4F6823A02EDB00BFE387 /* DayMenuItemController.xib */,
 				277D66CE23846F0E007E311F /* GeneralPreferencesController.xib */,
+				27510CF9239D77F900DC5708 /* EventItemController.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -264,6 +272,7 @@
 				274A5C59238053500019619C /* EventMenuItemViewController.swift */,
 				277D66CD23846F0E007E311F /* GeneralPreferencesController.swift */,
 				277D66D123846F47007E311F /* CalendarPreferencesController.swift */,
+				27BB4F6723A02EDB00BFE387 /* DayMenuItemController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -386,10 +395,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				270F302523788AC1006B78A7 /* .swiftlint.yml in Resources */,
+				27BB4F6A23A02EDB00BFE387 /* DayMenuItemController.xib in Resources */,
 				270F2FF023772E18006B78A7 /* Assets.xcassets in Resources */,
 				277D66D023846F0E007E311F /* GeneralPreferencesController.xib in Resources */,
 				277D66D423846F47007E311F /* CalendarPreferencesController.xib in Resources */,
 				270F2FF323772E18006B78A7 /* Main.storyboard in Resources */,
+				27510CFA239D77F900DC5708 /* EventItemController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +457,7 @@
 				2791B7FB237B2ABC009E506E /* Clock.swift in Sources */,
 				277D66D323846F47007E311F /* CalendarPreferencesController.swift in Sources */,
 				2791B7F9237B2661009E506E /* DesignFacts.swift in Sources */,
+				27BB4F6923A02EDB00BFE387 /* DayMenuItemController.swift in Sources */,
 				270F301F237878C7006B78A7 /* NSGraphicsImageRenderer.swift in Sources */,
 				2792F411237A1C4C00CAF8F6 /* CalendarGrid.swift in Sources */,
 				274ED1F52395844F000D2581 /* Error.swift in Sources */,
