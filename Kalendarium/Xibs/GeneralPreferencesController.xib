@@ -11,6 +11,7 @@
                 <outlet property="calendarColorView" destination="J9l-Ej-m0X" id="Sm6-Rt-KLq"/>
                 <outlet property="calendarIcon" destination="xT1-tU-Ifn" id="f5g-5g-zi8"/>
                 <outlet property="calendarList" destination="uPT-1w-Usp" id="nEw-7D-YlB"/>
+                <outlet property="daysToDisplay" destination="ZL4-YO-6c2" id="JAD-Cg-ZCN"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="6MI-Av-PzM"/>
             </connections>
         </customObject>
@@ -20,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <subviews>
                 <gridView fixedFrame="YES" xPlacement="center" yPlacement="center" rowAlignment="none" rowSpacing="8" columnSpacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OXO-9J-uVL">
-                    <rect key="frame" x="20" y="105" width="481" height="147"/>
+                    <rect key="frame" x="20" y="114" width="369" height="138"/>
                     <rows>
                         <gridRow id="4qf-1c-hXF"/>
                         <gridRow id="RtG-ge-02E"/>
@@ -30,14 +31,14 @@
                     </rows>
                     <columns>
                         <gridColumn id="6Xo-XK-twR"/>
-                        <gridColumn width="152" id="rfl-LH-HEt"/>
-                        <gridColumn id="m6x-ap-nsg"/>
-                        <gridColumn id="z7d-XU-SY0"/>
+                        <gridColumn width="140" id="rfl-LH-HEt"/>
+                        <gridColumn width="50" id="m6x-ap-nsg"/>
+                        <gridColumn width="50" id="z7d-XU-SY0"/>
                     </columns>
                     <gridCells>
                         <gridCell row="4qf-1c-hXF" column="6Xo-XK-twR" xPlacement="trailing" id="swJ-Qg-yex">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o5i-8a-SF1">
-                                <rect key="frame" x="3" y="123" width="98" height="16"/>
+                                <rect key="frame" x="3" y="114" width="98" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Menubar Color:" id="0PV-Bm-A3Y">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -47,7 +48,7 @@
                         </gridCell>
                         <gridCell row="4qf-1c-hXF" column="rfl-LH-HEt" xPlacement="leading" id="9rp-EF-XQ4">
                             <gridView key="contentView" xPlacement="leading" yPlacement="bottom" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="3xe-7s-syG">
-                                <rect key="frame" x="109" y="115" width="70" height="32"/>
+                                <rect key="frame" x="109" y="106" width="70" height="32"/>
                                 <constraints>
                                     <constraint firstItem="xT1-tU-Ifn" firstAttribute="top" secondItem="3xe-7s-syG" secondAttribute="top" constant="2" id="NBd-4r-w7K"/>
                                     <constraint firstItem="xT1-tU-Ifn" firstAttribute="leading" secondItem="J9l-Ej-m0X" secondAttribute="trailing" constant="6" id="kf4-6R-Nmy"/>
@@ -81,7 +82,7 @@
                         <gridCell row="4qf-1c-hXF" column="z7d-XU-SY0" id="hrR-lr-xsE"/>
                         <gridCell row="RtG-ge-02E" column="6Xo-XK-twR" xPlacement="trailing" id="PqC-bB-Y0P">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0jr-2B-ChB">
-                                <rect key="frame" x="60" y="91" width="41" height="16"/>
+                                <rect key="frame" x="60" y="82" width="41" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Login:" id="G9g-5o-kdv">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -91,7 +92,7 @@
                         </gridCell>
                         <gridCell row="RtG-ge-02E" column="rfl-LH-HEt" xPlacement="leading" id="y34-Nf-hzB">
                             <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bio-pq-0Mx">
-                                <rect key="frame" x="107" y="90" width="101" height="18"/>
+                                <rect key="frame" x="107" y="81" width="101" height="18"/>
                                 <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CiG-pn-shj">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -102,7 +103,7 @@
                         <gridCell row="RtG-ge-02E" column="z7d-XU-SY0" id="kCw-gq-juj"/>
                         <gridCell row="Z8c-KW-D11" column="6Xo-XK-twR" xPlacement="trailing" id="Xht-Ua-YY5">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h2l-GR-AQL">
-                                <rect key="frame" x="42" y="67" width="59" height="16"/>
+                                <rect key="frame" x="42" y="58" width="59" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Updates:" id="J0E-jJ-Y8i">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -112,7 +113,7 @@
                         </gridCell>
                         <gridCell row="Z8c-KW-D11" column="rfl-LH-HEt" xPlacement="leading" id="JIc-J9-40g">
                             <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2d1-Nt-oo0">
-                                <rect key="frame" x="107" y="66" width="93" height="18"/>
+                                <rect key="frame" x="107" y="57" width="93" height="18"/>
                                 <buttonCell key="cell" type="check" title="Check daily" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Abx-Ft-Amj">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -123,7 +124,7 @@
                         <gridCell row="Z8c-KW-D11" column="z7d-XU-SY0" id="Qya-g1-EAI"/>
                         <gridCell row="Df8-tm-Ntj" column="6Xo-XK-twR" id="eCq-aI-drU">
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JNu-du-kWE">
-                                <rect key="frame" x="-2" y="41" width="103" height="16"/>
+                                <rect key="frame" x="-2" y="32" width="103" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Defult Calendar:" id="l6M-IZ-Jbj">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -133,7 +134,7 @@
                         </gridCell>
                         <gridCell row="Df8-tm-Ntj" column="rfl-LH-HEt" xPlacement="leading" yPlacement="center" id="WDw-Zm-Fgz">
                             <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uPT-1w-Usp">
-                                <rect key="frame" x="107" y="35" width="145" height="25"/>
+                                <rect key="frame" x="107" y="26" width="145" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="U0m-Sy-06M"/>
                                 </constraints>
@@ -149,8 +150,47 @@
                         </gridCell>
                         <gridCell row="Df8-tm-Ntj" column="m6x-ap-nsg" id="zNB-kA-GDi"/>
                         <gridCell row="Df8-tm-Ntj" column="z7d-XU-SY0" id="rZE-NE-uaf"/>
-                        <gridCell row="vNs-we-SxR" column="6Xo-XK-twR" id="XIQ-sU-Ye6"/>
-                        <gridCell row="vNs-we-SxR" column="rfl-LH-HEt" id="jP6-3v-6Nh"/>
+                        <gridCell row="vNs-we-SxR" column="6Xo-XK-twR" id="XIQ-sU-Ye6">
+                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bmg-Vg-7xx">
+                                <rect key="frame" x="-1" y="3" width="101" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Days to Display:" id="bRp-j4-jqY">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </gridCell>
+                        <gridCell row="vNs-we-SxR" column="rfl-LH-HEt" xPlacement="leading" id="jP6-3v-6Nh">
+                            <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZL4-YO-6c2">
+                                <rect key="frame" x="107" y="-3" width="47" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="llJ-ut-yOB" id="EpA-oF-ZIX">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="g1B-wN-jSR">
+                                        <items>
+                                            <menuItem title="1" state="on" id="llJ-ut-yOB"/>
+                                            <menuItem title="2" id="AcF-qZ-Hmt"/>
+                                            <menuItem title="3" id="Gng-ze-lcd"/>
+                                            <menuItem title="4" id="jYh-Yh-7GZ">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="5" id="caQ-zh-Cel">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="6" id="U4C-OH-ZZr">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="7" id="CJV-Wa-wsp">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="daysToDisplayChanged:" target="-2" id="ZIu-jf-Xyy"/>
+                                </connections>
+                            </popUpButton>
+                        </gridCell>
                         <gridCell row="vNs-we-SxR" column="m6x-ap-nsg" id="Wqo-s9-yD0"/>
                         <gridCell row="vNs-we-SxR" column="z7d-XU-SY0" id="cU9-He-e5B"/>
                     </gridCells>

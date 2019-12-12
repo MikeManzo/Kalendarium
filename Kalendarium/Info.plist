@@ -29,7 +29,7 @@
 	<key>NSCalendarsUsageDescription</key>
 	<string>$(PRODUCT_NAME) whould like to show information about your calendar events. You can change this later via System Preferences--&gt;Security &amp; Privacy.</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2019 Mike Manzo. All rights reserved.</string>
+	<string>Copyright © 2019 Quantum Joker. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSPrincipalClass</key>

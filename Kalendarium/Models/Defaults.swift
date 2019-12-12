@@ -10,10 +10,10 @@ import AppKit
 import SwiftyUserDefaults
 
 extension DefaultsKeys {
-    var menuBarCalendarColor: DefaultsKey<NSColor> { return .init("Defaults", defaultValue: NSColor.red) }
-    var dayHoverHighlightColor: DefaultsKey<NSColor> { return .init("Defaults", defaultValue: NSColor.blue) }
-    var dayHighlightColor: DefaultsKey<NSColor> { return .init("Defaults", defaultValue: .accent) }
-    var defaultCalendar: DefaultsKey<String> { return .init("Defaults", defaultValue: "") }
-    var calendarsToDisplay: DefaultsKey<[String]> { return .init("Defaults", defaultValue: []) }
-    var eventDaysToDisplay: DefaultsKey<Int> { return .init("Defaults", defaultValue: 5) }
+    var menuBarCalendarColor: DefaultsKey<NSColor> { return .init("menuBarCalendarColor", defaultValue: NSColor.red) }
+    var dayHoverHighlightColor: DefaultsKey<NSColor> { return .init("dayHoverHighlightColor", defaultValue: NSColor.blue) }
+    var dayHighlightColor: DefaultsKey<NSColor> { return .init("dayHighlightColor", defaultValue: .accent) }
+    var defaultCalendar: DefaultsKey<String> { return .init("defaultCalendar", defaultValue: "") }
+    var calendarsToDisplay: DefaultsKey<[String]> { return .init("calendarsToDisplay", defaultValue: []) }
+    var eventDaysToDisplay: DefaultsKey<Int> { return .init("eventDaysToDisplay", defaultValue: 5) }
 }

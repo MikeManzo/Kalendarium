@@ -25,6 +25,10 @@ class CalendarPreferencesController: NSViewController, PreferencePane {
         super.viewDidLoad()
 
         preferredContentSize = NSSize(width: 480, height: 272)
+    }
+
+    override func viewWillAppear() {
+        tableData.removeAll()
         setupCalendars()
     }
     
@@ -43,11 +47,12 @@ class CalendarPreferencesController: NSViewController, PreferencePane {
                 tableData.append(calendar.source?.title as Any)
                 tableData.append(calendar)
                 formerSource = calendar.source.title
-            } else { // Jusrt the Calendar
+            } else { // Just the Calendar
                 tableData.append(calendar)
                 formerSource = calendar.source.title
             }
         }
+        calendarTable.reloadData()
     }
 }
 
@@ -99,9 +104,11 @@ extension CalendarPreferencesController: NSTableViewDataSource, NSTableViewDeleg
                 if Defaults.calendarsToDisplay.firstIndex(of: (calendar?.calendarIdentifier)!) != nil {
 //                    print("Name:\((calendar?.title)!), Row: \(row), ID:\(calendar?.calendarIdentifier ?? "")!)")
                     (view as? CalendarDetailView)?.check.state = .on
+                } else {
+                    (view as? CalendarDetailView)?.check.state = .off
                 }
             } else {
-                print("Error")
+                print("Error: Unable to show Calendar Table View")
             }
         default:
             print("Error: Unknown View")

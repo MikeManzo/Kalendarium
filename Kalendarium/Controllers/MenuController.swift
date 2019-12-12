@@ -153,10 +153,12 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
         }
         
         /// Setup a call-forward listener for anyone to tell the controller that the color of the MenuBar item has changed
-         NotificationCenter.default.addObserver(self, selector: #selector(menuBarColorUpdate(sender:)), name: NSNotification.Name(rawValue: "UpdateMenuBarColor"), object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(menuBarColorUpdate(sender:)),
+                                                name: NSNotification.Name(rawValue: "UpdateMenuBarColor"), object: nil)
 
         /// Setup a call-forward listener for anyone to tell the controller that the calanders to be displayed has changed
-         NotificationCenter.default.addObserver(self, selector: #selector(displayCalendarUpdate(sender:)), name: NSNotification.Name(rawValue: "UpdateCalendarsToDisplay"), object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(displayCalendarUpdate(sender:)),
+                                                name: NSNotification.Name(rawValue: "UpdateCalendarsToDisplay"), object: nil)
     }
     
     @objc func menuBarColorUpdate(sender: AnyObject) {
@@ -368,7 +370,8 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
 //        events.removeAll()
 //        eventItems.removeAll()
         
-        events = (EventStore.shared.getEventsForRange(endingAfter: selectedTime.startOf(.days), daysForward: Defaults.eventDaysToDisplay, in: Defaults.calendarsToDisplay))
+        events = (EventStore.shared.getEventsForRange(endingAfter: selectedTime.startOf(.days),
+                                                      daysForward: Defaults.eventDaysToDisplay, in: Defaults.calendarsToDisplay))
 
         if !events.isEmpty {
             DispatchQueue.main.async { [unowned self] in
@@ -380,23 +383,6 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
             eventItems.removeAll()
         }
     }
-/*    private func updateEventItems() {
-        events.removeAll()
-        eventItems.removeAll()
-        
-        events = (EventStore.shared.getEventsForDay(endingAfter: selectedTime.startOf(.days), in: Defaults.calendarsToDisplay))
-
-        if !events.isEmpty {
-            DispatchQueue.main.async { [unowned self] in
-                self.eventItems = self.events[...min(self.events.count - 1, 3)].map { event in
-                    return EventMenuItemViewController(event: event)
-                }
-            }
-        } else {
-            eventItems.removeAll()
-        }
-    }
-*/
 }
 
 /**

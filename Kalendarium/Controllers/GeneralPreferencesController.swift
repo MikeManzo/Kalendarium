@@ -16,7 +16,8 @@ class GeneralPreferencesController: NSViewController, QJColorButtonDelegate, Pre
     @IBOutlet weak var calendarIcon: NSImageView!
     @IBOutlet weak var calendarColorView: QJColorChooser!
     @IBOutlet weak var calendarList: NSPopUpButton!
-
+    @IBOutlet weak var daysToDisplay: NSPopUpButton!
+    
     let toolbarItemIcon = NSImage(named: NSImage.preferencesGeneralName)!
     let preferencePaneIdentifier = PreferencePane.Identifier.general
     let preferencePaneTitle = "General"
@@ -31,13 +32,27 @@ class GeneralPreferencesController: NSViewController, QJColorButtonDelegate, Pre
 
         setupCalendarColorView()
         setupCalendarSelector()
-        
+/*
         let items = calendarList.itemArray
+        print("UUID: \(Defaults.defaultCalendar)")
         if let menuItem = items.first(where: { ($0.representedObject as? String) == Defaults.defaultCalendar }) {
             calendarList.select(menuItem)
         }
+        
+        daysToDisplay.setTitle(String(Defaults.eventDaysToDisplay))
+*/
     }
 
+    override func viewWillAppear() {
+        let items = calendarList.itemArray
+//        print("Loading UUID: \(Defaults.defaultCalendar)")
+        if let menuItem = items.first(where: { ($0.representedObject as? String) == Defaults.defaultCalendar }) {
+            calendarList.select(menuItem)
+        }
+        
+        daysToDisplay.setTitle(String(Defaults.eventDaysToDisplay))
+    }
+    
     /**
      Setup the color selector for the calandar icon in the menubar
      
@@ -61,9 +76,13 @@ class GeneralPreferencesController: NSViewController, QJColorButtonDelegate, Pre
         guard let uuID = sender.selectedItem?.representedObject as? String else {
             return
         }
+//        print("Saving UUID: \(uuID)")
         Defaults.defaultCalendar = uuID
     }
     
+    @IBAction func daysToDisplayChanged(_ sender: NSPopUpButton) {
+        Defaults.eventDaysToDisplay = Int(daysToDisplay.selectedItem!.title)!
+    }
     /**
      Load the calendars into the calendar list; sorting alphabetically first
      Caledar source first, then actuall calendar
