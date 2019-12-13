@@ -35,4 +35,8 @@ class EventDetailController: NSViewController {
         super.viewDidLoad()
         
     }
+    
+    override func viewDidAppear() {
+        NSApplication.shared.activate(ignoringOtherApps: true)
+    }
 }

@@ -17,7 +17,7 @@ extension PreferencePane.Identifier {
     static let general = Identifier("general")
 }
 
-class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
+class MenuController: NSObject {
     // MARK: Class members
     let appBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     var calendarViewController: CalendarViewController?
@@ -103,36 +103,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
             }
         }
     }
-/*    var eventItems: [EventMenuItemViewController] = [] {
-        didSet {
-            oldValue.forEach { mainMenu.removeItem($0.menuItem) }
-            if !eventItems.isEmpty && oldValue.isEmpty {
-                mainMenu.insertItem(eventItemSeperator, at: 6)
-            } else if eventItems.isEmpty && !oldValue.isEmpty {
-                mainMenu.removeItem(eventItemSeperator)
-            }
 
-            // Testing
-            if !eventItems.isEmpty {
-                let paragraphStyle = NSMutableParagraphStyle()
-                paragraphStyle.lineBreakMode = .byTruncatingTail
-                let primaryAttributes: [NSAttributedString.Key: Any] = [
-                    .font: NSFont.systemFont(ofSize: 13),
-                    .paragraphStyle: paragraphStyle
-                ]
-                
-                let dayMenu = NSMenuItem()
-                dayMenu.attributedTitle = NSAttributedString(string: "Today", attributes: primaryAttributes)
-                mainMenu.insertItem(dayMenu, at: 6)
-            }
-            // Testing --> Change 7 + $0.offset to 6 + $0.offset
-
-            eventItems.enumerated().forEach {
-                mainMenu.insertItem($0.element.menuItem, at: 7 + $0.offset)
-            }
-        }
-    }
-*/
     override init() {
         selectedTime = Clock.shared.currentTick
 
@@ -159,6 +130,8 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
         /// Setup a call-forward listener for anyone to tell the controller that the calanders to be displayed has changed
          NotificationCenter.default.addObserver(self, selector: #selector(displayCalendarUpdate(sender:)),
                                                 name: NSNotification.Name(rawValue: "UpdateCalendarsToDisplay"), object: nil)
+        
+        NSApplication.shared.activate(ignoringOtherApps: true)
     }
     
     @objc func menuBarColorUpdate(sender: AnyObject) {
@@ -392,7 +365,7 @@ class MenuController: NSObject, NSMenuDelegate, CalendarViewDelegate {
  
  - Returns: Nothing
  */
-extension MenuController {
+extension MenuController: CalendarViewDelegate {
     func calendarViewController(viewController: CalendarViewController, didRequestSelectedTime time: Moment) {
         selectedTime = time
         print("\(time) was selected")
@@ -409,7 +382,9 @@ extension MenuController {
     func calendarViewControllerDidRequestSelectedTimeToNow(viewController: CalendarViewController) {
         selectedTime = Clock.shared.currentTick
     }
-        
+}
+
+extension MenuController: NSMenuDelegate {
     func menuWillOpen(_ menu: NSMenu) {
         menuIsOpen = true
         updateEventItems()
@@ -419,15 +394,4 @@ extension MenuController {
     func menuDidClose(_ menu: NSMenu) {
         menuIsOpen = false
     }
-/*
-    func menu(_ menu: NSMenu, willHighlight item: NSMenuItem?) {
-        if let prevController = highlightedEvent {
-            prevController.unhighlight()
-        }
-        if let controller = eventItems.first(where: { $0.menuItem == item }) {
-            controller.highlight()
-            highlightedEvent = controller
-        }
-    }
-*/
 }

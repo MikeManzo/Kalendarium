@@ -19,8 +19,9 @@ class EventMenuItemViewController: NSViewController {
     
     lazy var popover: NSPopover = {
         let popover = NSPopover()
-        popover.behavior = .semitransient
         popover.contentViewController = EventDetailController(event: theEvent)
+        popover.behavior = .applicationDefined
+        popover.animates = true
         popover.delegate = self
         return popover
     }()
