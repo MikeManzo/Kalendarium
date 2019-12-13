@@ -16,7 +16,15 @@ class EventMenuItemViewController: NSViewController {
     
     let menuItem: NSMenuItem
     let theEvent: EKEvent
-        
+    
+    lazy var popover: NSPopover = {
+        let popover = NSPopover()
+        popover.behavior = .semitransient
+        popover.contentViewController = EventDetailController(event: theEvent)
+        popover.delegate = self
+        return popover
+    }()
+    
     init(event: EKEvent) {
         theEvent = event
         menuItem = NSMenuItem(title: event.title, action: #selector(self.viewInCalendar(_:)), keyEquivalent: "")
@@ -51,8 +59,16 @@ class EventMenuItemViewController: NSViewController {
     }
 
     @objc private func viewInCalendar(_ sender: NSMenuItem) {
-        print("\(sender.title) was selected")
+        if !NSWorkspace.shared.accessibilityDisplayShouldReduceTransparency {                   // Check if transparency is allowed
+            popover.appearance = NSAppearance(named: NSAppearance.Name.vibrantDark)      // Change the appearance and material for the selection of menu
+        }
+        
+        popover.show(relativeTo: NSRect.zero, of: view, preferredEdge: NSRectEdge.minX)
     }
+}
+
+extension EventMenuItemViewController: NSPopoverDelegate {
+
 }
 
 /*
