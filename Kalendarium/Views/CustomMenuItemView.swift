@@ -10,7 +10,14 @@ import Cocoa
 
 // [2019 Update](https://stackoverflow.com/questions/6054331/highlighting-a-nsmenuitem-with-a-custom-view#)
 
+protocol CustomMenuItemDelegate: class {
+    func itemEntered()
+    func itemExited()
+}
+
 class CustomMenuItemView: NSView {
+    weak var delegate: CustomMenuItemDelegate?
+    
     var isHighlighted: Bool = false {
         didSet {
             if oldValue != isHighlighted {
@@ -37,6 +44,10 @@ class CustomMenuItemView: NSView {
             }
         }
         isHighlighted = true        // It will call the draw(:)
+        
+        if delegate != nil {
+            delegate?.itemEntered()
+        }
     }
     
     // While exiting from the view, It will make NSVisualEffectView as default.
@@ -46,6 +57,10 @@ class CustomMenuItemView: NSView {
         if let v = enclosingMenuItem?.view?.superview as? NSVisualEffectView {
             v.appearance = nil
             v.material = .menu
+        }
+        
+        if delegate != nil {
+            delegate?.itemExited()
         }
     }
 

@@ -34,6 +34,7 @@ class EventDetailController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        preferredContentSize = NSSize(width: 253, height: 190)      // Set the size of our view        
     }
     
     override func viewDidAppear() {

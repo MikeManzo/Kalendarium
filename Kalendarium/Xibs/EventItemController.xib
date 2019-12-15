@@ -8,9 +8,11 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="EventMenuItemViewController" customModule="Kalendarium" customModuleProvider="target">
             <connections>
+                <outlet property="disclosure" destination="YEo-QS-Eb9" id="6EE-wF-MRd"/>
                 <outlet property="eventColor" destination="kwE-vK-an8" id="mxf-qy-TeD"/>
                 <outlet property="eventTimeRange" destination="UP8-WZ-eax" id="EZw-a3-Utr"/>
                 <outlet property="eventTitle" destination="mjt-cn-Q6L" id="82x-st-aJn"/>
+                <outlet property="theView" destination="XLi-bL-QJB" id="lQn-kg-FIe"/>
                 <outlet property="view" destination="XLi-bL-QJB" id="snm-tL-o1N"/>
             </connections>
         </customObject>
@@ -20,9 +22,9 @@
             <rect key="frame" x="0.0" y="0.0" width="253" height="31"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-cn-Q6L">
-                    <rect key="frame" x="16" y="8" width="125" height="15"/>
+                    <rect key="frame" x="16" y="8" width="114" height="15"/>
                     <textFieldCell key="cell" allowsUndo="NO" title="Label" id="IeZ-As-Jx1">
-                        <font key="font" metaFont="system" size="12"/>
+                        <font key="font" metaFont="label" size="12"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -33,7 +35,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="pSY-WT-YUI"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-WZ-eax">
-                    <rect key="frame" x="145" y="8" width="100" height="14"/>
+                    <rect key="frame" x="128" y="8" width="100" height="14"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="96" id="Zfx-VS-kSf"/>
                     </constraints>
@@ -43,18 +45,29 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="YEo-QS-Eb9">
+                    <rect key="frame" x="227" y="3" width="29" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DRL-Nf-j36">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="controlContent" size="11"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="editEventDetails:" target="-2" id="5zj-rF-CvX"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="UP8-WZ-eax" firstAttribute="baseline" secondItem="mjt-cn-Q6L" secondAttribute="firstBaseline" constant="1" id="1AC-MC-eit"/>
-                <constraint firstItem="UP8-WZ-eax" firstAttribute="leading" secondItem="mjt-cn-Q6L" secondAttribute="trailing" constant="8" id="1lK-AL-DNu"/>
+                <constraint firstItem="UP8-WZ-eax" firstAttribute="leading" secondItem="mjt-cn-Q6L" secondAttribute="trailing" constant="2" id="1lK-AL-DNu"/>
                 <constraint firstAttribute="height" constant="31" id="O9f-ER-zcS"/>
                 <constraint firstItem="mjt-cn-Q6L" firstAttribute="top" secondItem="UP8-WZ-eax" secondAttribute="top" constant="-1" id="fxa-lQ-Wcu"/>
                 <constraint firstItem="mjt-cn-Q6L" firstAttribute="leading" secondItem="kwE-vK-an8" secondAttribute="trailing" constant="2" id="gJK-8Z-eAN"/>
                 <constraint firstAttribute="width" constant="253" id="mNq-uW-Rk1"/>
-                <constraint firstAttribute="trailing" secondItem="UP8-WZ-eax" secondAttribute="trailing" constant="10" id="utv-IZ-Lvp"/>
+                <constraint firstAttribute="trailing" secondItem="UP8-WZ-eax" secondAttribute="trailing" constant="27" id="utv-IZ-Lvp"/>
                 <constraint firstItem="mjt-cn-Q6L" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="x9d-Og-EMO"/>
             </constraints>
-            <point key="canvasLocation" x="120.5" y="-70.5"/>
+            <point key="canvasLocation" x="-521" y="-92"/>
         </customView>
     </objects>
     <resources>

@@ -17,6 +17,7 @@
 		270F301F237878C7006B78A7 /* NSGraphicsImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F301E237878C7006B78A7 /* NSGraphicsImageRenderer.swift */; };
 		270F3022237879F3006B78A7 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 270F3021237879F3006B78A7 /* SwiftyUserDefaults */; };
 		270F302523788AC1006B78A7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 270F302423788AC0006B78A7 /* .swiftlint.yml */; };
+		271C5C3423A5A09500F261AC /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C5C3323A5A09500F261AC /* EventDetailsView.swift */; };
 		274A5C5A238053500019619C /* EventMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C59238053500019619C /* EventMenuItemViewController.swift */; };
 		274A5C5C238053A00019619C /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5B238053A00019619C /* NSDate+Extension.swift */; };
 		274A5C5E238054310019619C /* CustomMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5D238054310019619C /* CustomMenuItemView.swift */; };
@@ -83,6 +84,7 @@
 		270F301823776036006B78A7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		270F301E237878C7006B78A7 /* NSGraphicsImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSGraphicsImageRenderer.swift; sourceTree = "<group>"; };
 		270F302423788AC0006B78A7 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		271C5C3323A5A09500F261AC /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
 		274A5C59238053500019619C /* EventMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMenuItemViewController.swift; sourceTree = "<group>"; };
 		274A5C5B238053A00019619C /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		274A5C5D238054310019619C /* CustomMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuItemView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				270F301823776036006B78A7 /* CalendarView.swift */,
 				2791B802237B3034009E506E /* VibrantView.swift */,
 				274A5C5D238054310019619C /* CustomMenuItemView.swift */,
+				271C5C3323A5A09500F261AC /* EventDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				2791B805237B32BA009E506E /* CalendarDayViewController.swift in Sources */,
 				2791B809237B33EB009E506E /* NSColor+Extension.swift in Sources */,
 				27E552A823A28BBD00A4FB69 /* EventDetailController.swift in Sources */,
+				271C5C3423A5A09500F261AC /* EventDetailsView.swift in Sources */,
 				274A5C5A238053500019619C /* EventMenuItemViewController.swift in Sources */,
 				2792F40F2379D4AA00CAF8F6 /* CalendarViewController.swift in Sources */,
 				277D66CF23846F0E007E311F /* GeneralPreferencesController.swift in Sources */,
