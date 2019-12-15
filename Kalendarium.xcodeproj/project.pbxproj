@@ -44,6 +44,7 @@
 		27BB4F6923A02EDB00BFE387 /* DayMenuItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB4F6723A02EDB00BFE387 /* DayMenuItemController.swift */; };
 		27BB4F6A23A02EDB00BFE387 /* DayMenuItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27BB4F6823A02EDB00BFE387 /* DayMenuItemController.xib */; };
 		27BB4F6C23A1491D00BFE387 /* NSView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB4F6B23A1491D00BFE387 /* NSView+Extension.swift */; };
+		27CFABC623A69B7500607262 /* NSGridView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CFABC523A69B7500607262 /* NSGridView+Extension.swift */; };
 		27E552A823A28BBD00A4FB69 /* EventDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E552A623A28BBD00A4FB69 /* EventDetailController.swift */; };
 		27E552A923A28BBD00A4FB69 /* EventDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E552A723A28BBD00A4FB69 /* EventDetailController.xib */; };
 		27EA6A92238985CF006F6514 /* NSImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA6A91238985CF006F6514 /* NSImage+Extension.swift */; };
@@ -109,6 +110,7 @@
 		27BB4F6723A02EDB00BFE387 /* DayMenuItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMenuItemController.swift; sourceTree = "<group>"; };
 		27BB4F6823A02EDB00BFE387 /* DayMenuItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayMenuItemController.xib; sourceTree = "<group>"; };
 		27BB4F6B23A1491D00BFE387 /* NSView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Extension.swift"; sourceTree = "<group>"; };
+		27CFABC523A69B7500607262 /* NSGridView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSGridView+Extension.swift"; sourceTree = "<group>"; };
 		27E552A623A28BBD00A4FB69 /* EventDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailController.swift; sourceTree = "<group>"; };
 		27E552A723A28BBD00A4FB69 /* EventDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailController.xib; sourceTree = "<group>"; };
 		27EA6A91238985CF006F6514 /* NSImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extension.swift"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				27EA6A91238985CF006F6514 /* NSImage+Extension.swift */,
 				2791B7FD237B2E12009E506E /* Moment+Extension.swift */,
 				27BB4F6B23A1491D00BFE387 /* NSView+Extension.swift */,
+				27CFABC523A69B7500607262 /* NSGridView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				274A5C5E238054310019619C /* CustomMenuItemView.swift in Sources */,
 				27BB4F6C23A1491D00BFE387 /* NSView+Extension.swift in Sources */,
 				2792F40D2379C8BA00CAF8F6 /* MenuController.swift in Sources */,
+				27CFABC623A69B7500607262 /* NSGridView+Extension.swift in Sources */,
 				2705E058237F67F800CF013C /* EventStore.swift in Sources */,
 				2791B7FB237B2ABC009E506E /* Clock.swift in Sources */,
 				277D66D323846F47007E311F /* CalendarPreferencesController.swift in Sources */,

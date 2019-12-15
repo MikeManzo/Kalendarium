@@ -9,33 +9,24 @@
         <customObject id="-2" userLabel="File's Owner" customClass="EventDetailController" customModule="Kalendarium" customModuleProvider="target">
             <connections>
                 <outlet property="eventCalendar" destination="8vu-JO-avX" id="mWv-7Q-Uvk"/>
-                <outlet property="eventFromTime" destination="Wsy-7V-BkY" id="e03-Ni-fUS"/>
-                <outlet property="eventTitle" destination="Oyg-I1-ggC" id="Qay-c2-iXn"/>
+                <outlet property="eventFromTime" destination="Dyv-Uq-OWN" id="lHh-Vj-sHp"/>
+                <outlet property="eventTitle" destination="3lv-7P-PzP" id="YSg-qz-WuE"/>
                 <outlet property="eventToTime" destination="ELz-Yg-50G" id="g84-3A-o5l"/>
                 <outlet property="gridView" destination="r30-Ho-0HZ" id="ymk-2M-2sm"/>
+                <outlet property="theView" destination="Hz6-mo-xeY" id="yXr-zb-SBC"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY" customClass="EventDetailsView" customModule="Kalendarium" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="253" height="190"/>
+            <rect key="frame" x="0.0" y="0.0" width="253" height="193"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyg-I1-ggC">
-                    <rect key="frame" x="5" y="172" width="243" height="15"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" title="Event Title" id="0R4-4a-dzv">
-                        <font key="font" size="14" name="HelveticaNeue"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="S7Q-pW-uqI">
-                    <rect key="frame" x="0.0" y="167" width="253" height="5"/>
-                </box>
                 <gridView xPlacement="leading" yPlacement="bottom" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="r30-Ho-0HZ">
-                    <rect key="frame" x="7" y="20" width="239" height="141"/>
+                    <rect key="frame" x="7" y="15" width="239" height="163"/>
                     <rows>
-                        <gridRow id="a0m-o2-O2b"/>
+                        <gridRow id="i2w-Z1-OFp"/>
+                        <gridRow id="Q7l-Kw-hVg"/>
                         <gridRow id="yg4-2b-XN5"/>
                         <gridRow id="E0l-aK-Wr1"/>
                         <gridRow id="d2V-rG-Wh9"/>
@@ -48,23 +39,34 @@
                         <gridColumn width="186" id="mgw-RA-b0D"/>
                     </columns>
                     <gridCells>
-                        <gridCell row="a0m-o2-O2b" column="3tt-8G-sij" xPlacement="trailing" id="QoS-s6-89a">
-                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1ar-q7-5Cu">
+                        <gridCell row="i2w-Z1-OFp" column="3tt-8G-sij" xPlacement="center" id="emE-tT-d6D">
+                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3lv-7P-PzP">
+                                <rect key="frame" x="6" y="147" width="35" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Title" id="Fhr-ku-Geo">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </gridCell>
+                        <gridCell row="i2w-Z1-OFp" column="mgw-RA-b0D" id="DLK-VF-fpl"/>
+                        <gridCell row="Q7l-Kw-hVg" column="3tt-8G-sij" xPlacement="trailing" id="UhS-nI-LfA">
+                            <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YoZ-cD-BOK">
                                 <rect key="frame" x="18" y="127" width="31" height="14"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="From" id="SOn-YD-7fT">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="From" id="SlT-oO-PFe">
                                     <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </gridCell>
-                        <gridCell row="a0m-o2-O2b" column="mgw-RA-b0D" id="APn-a1-vjI">
-                            <textField key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wsy-7V-BkY">
+                        <gridCell row="Q7l-Kw-hVg" column="mgw-RA-b0D" id="gZm-Jd-Vaj">
+                            <textField key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dyv-Uq-OWN">
                                 <rect key="frame" x="51" y="127" width="184" height="14"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="jOW-rf-BK8"/>
+                                    <constraint firstAttribute="width" constant="180" id="IPw-Ru-rzg"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Start" id="cwJ-Vp-nQJ">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Start" id="dA5-oc-kLT">
                                     <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -213,17 +215,12 @@
                 </gridView>
             </subviews>
             <constraints>
-                <constraint firstItem="r30-Ho-0HZ" firstAttribute="top" secondItem="S7Q-pW-uqI" secondAttribute="bottom" constant="8" symbolic="YES" id="DhE-YE-kyv"/>
-                <constraint firstItem="Oyg-I1-ggC" firstAttribute="trailing" secondItem="r30-Ho-0HZ" secondAttribute="trailing" id="Ob5-Yh-MTH"/>
-                <constraint firstItem="Oyg-I1-ggC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="3" id="XVj-Bt-jAq"/>
-                <constraint firstItem="S7Q-pW-uqI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="gwD-Iu-qsB"/>
-                <constraint firstItem="Oyg-I1-ggC" firstAttribute="centerX" secondItem="S7Q-pW-uqI" secondAttribute="centerX" id="iPc-Lf-DQ1"/>
-                <constraint firstItem="S7Q-pW-uqI" firstAttribute="top" secondItem="Oyg-I1-ggC" secondAttribute="bottom" constant="2" id="mCY-BG-P7E"/>
-                <constraint firstItem="Oyg-I1-ggC" firstAttribute="leading" secondItem="r30-Ho-0HZ" secondAttribute="leading" id="oks-bR-Pgn"/>
-                <constraint firstAttribute="trailing" secondItem="S7Q-pW-uqI" secondAttribute="trailing" id="yR2-0E-Cex"/>
-                <constraint firstItem="S7Q-pW-uqI" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="z2Q-BA-zWr"/>
+                <constraint firstAttribute="trailing" secondItem="r30-Ho-0HZ" secondAttribute="trailing" constant="7" id="WQx-rS-7rn"/>
+                <constraint firstItem="r30-Ho-0HZ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="15" id="Zhi-Ad-7Vf"/>
+                <constraint firstItem="r30-Ho-0HZ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="7" id="l44-tb-6CW"/>
+                <constraint firstAttribute="width" constant="253" id="uaJ-Ib-ooH"/>
             </constraints>
-            <point key="canvasLocation" x="29.5" y="107"/>
+            <point key="canvasLocation" x="29.5" y="108.5"/>
         </customView>
     </objects>
 </document>

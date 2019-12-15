@@ -15,6 +15,7 @@ class EventDetailController: NSViewController {
     @IBOutlet weak var eventToTime: NSTextField!
     @IBOutlet weak var eventCalendar: NSPopUpButton!
     @IBOutlet weak var gridView: NSGridView!
+    @IBOutlet weak var theView: EventDetailsView!
     
     let theEvent: EKEvent
     
@@ -33,11 +34,14 @@ class EventDetailController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        preferredContentSize = NSSize(width: 253, height: 190)      // Set the size of our view        
+        gridView.wantsLayer = true
+        gridView.layer?.backgroundColor = NSColor.red.cgColor
+        gridView.mergeCellsInRow(row: 0, startingColumn: 0, endingColumn: 1)
+               
+        preferredContentSize = NSSize(width: 253, height: 190)
     }
     
     override func viewDidAppear() {
-        NSApplication.shared.activate(ignoringOtherApps: true)
+        gridView.row(at: 5).isHidden = true
     }
 }
