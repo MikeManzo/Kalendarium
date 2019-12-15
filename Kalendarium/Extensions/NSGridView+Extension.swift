@@ -8,6 +8,7 @@
 
 import Cocoa
 
+// [Merge Rows](https://stackoverflow.com/questions/47026703/how-to-span-columns-in-nsgridview-or-nstableview#)
 extension NSGridView {
     func mergeCellsInColumn(column: Int, startingRow: Int, endingRow: Int) {
         self.mergeCells(inHorizontalRange: NSRange(location: column, length: 1),

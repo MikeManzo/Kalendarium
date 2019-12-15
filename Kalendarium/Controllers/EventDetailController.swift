@@ -34,14 +34,14 @@ class EventDetailController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gridView.wantsLayer = true
-        gridView.layer?.backgroundColor = NSColor.red.cgColor
         gridView.mergeCellsInRow(row: 0, startingColumn: 0, endingColumn: 1)
-               
-        preferredContentSize = NSSize(width: 253, height: 190)
+
+        gridView.row(at: 5).isHidden = true
+        preferredContentSize = gridView.fittingSize
     }
     
     override func viewDidAppear() {
         gridView.row(at: 5).isHidden = true
+        preferredContentSize = gridView.fittingSize
     }
 }

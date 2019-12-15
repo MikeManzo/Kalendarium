@@ -20,10 +20,10 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY" customClass="EventDetailsView" customModule="Kalendarium" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="253" height="193"/>
+            <rect key="frame" x="0.0" y="0.0" width="253" height="199"/>
             <subviews>
                 <gridView xPlacement="leading" yPlacement="bottom" rowAlignment="none" translatesAutoresizingMaskIntoConstraints="NO" id="r30-Ho-0HZ">
-                    <rect key="frame" x="7" y="15" width="239" height="163"/>
+                    <rect key="frame" x="7" y="15" width="239" height="169"/>
                     <rows>
                         <gridRow id="i2w-Z1-OFp"/>
                         <gridRow id="Q7l-Kw-hVg"/>
@@ -215,6 +215,7 @@
                 </gridView>
             </subviews>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="r30-Ho-0HZ" secondAttribute="bottom" constant="15" id="N0j-dB-Bpe"/>
                 <constraint firstAttribute="trailing" secondItem="r30-Ho-0HZ" secondAttribute="trailing" constant="7" id="WQx-rS-7rn"/>
                 <constraint firstItem="r30-Ho-0HZ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="15" id="Zhi-Ad-7Vf"/>
                 <constraint firstItem="r30-Ho-0HZ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="7" id="l44-tb-6CW"/>
