@@ -15,5 +15,4 @@ class EventDetailsView: NSView {
 
         // Drawing code here.
     }
-    
 }

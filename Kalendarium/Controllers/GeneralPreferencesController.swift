@@ -32,20 +32,10 @@ class GeneralPreferencesController: NSViewController, QJColorButtonDelegate, Pre
 
         setupCalendarColorView()
         setupCalendarSelector()
-/*
-        let items = calendarList.itemArray
-        print("UUID: \(Defaults.defaultCalendar)")
-        if let menuItem = items.first(where: { ($0.representedObject as? String) == Defaults.defaultCalendar }) {
-            calendarList.select(menuItem)
-        }
-        
-        daysToDisplay.setTitle(String(Defaults.eventDaysToDisplay))
-*/
     }
 
     override func viewWillAppear() {
         let items = calendarList.itemArray
-//        print("Loading UUID: \(Defaults.defaultCalendar)")
         if let menuItem = items.first(where: { ($0.representedObject as? String) == Defaults.defaultCalendar }) {
             calendarList.select(menuItem)
         }
@@ -76,7 +66,6 @@ class GeneralPreferencesController: NSViewController, QJColorButtonDelegate, Pre
         guard let uuID = sender.selectedItem?.representedObject as? String else {
             return
         }
-//        print("Saving UUID: \(uuID)")
         Defaults.defaultCalendar = uuID
     }
     
