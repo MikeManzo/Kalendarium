@@ -21,36 +21,37 @@
         <customView translatesAutoresizingMaskIntoConstraints="NO" id="XLi-bL-QJB" customClass="CustomMenuItemView" customModule="Kalendarium" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="253" height="31"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-cn-Q6L">
-                    <rect key="frame" x="16" y="8" width="114" height="15"/>
-                    <textFieldCell key="cell" allowsUndo="NO" title="Label" id="IeZ-As-Jx1">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kwE-vK-an8">
+                    <rect key="frame" x="4" y="8" width="16" height="16"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="pSY-WT-YUI"/>
+                </imageView>
+                <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-cn-Q6L">
+                    <rect key="frame" x="25" y="8" width="118" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="114" id="SJX-7O-cnu"/>
+                    </constraints>
+                    <textFieldCell key="cell" allowsUndo="NO" title="Event" id="IeZ-As-Jx1" userLabel="Event">
                         <font key="font" metaFont="label" size="12"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="kwE-vK-an8">
-                    <rect key="frame" x="0.0" y="7" width="16" height="16"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="pSY-WT-YUI"/>
-                </imageView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-WZ-eax">
-                    <rect key="frame" x="128" y="8" width="100" height="14"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-WZ-eax" userLabel="Event Time">
+                    <rect key="frame" x="132" y="10" width="97" height="12"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="96" id="Zfx-VS-kSf"/>
+                        <constraint firstAttribute="width" constant="93" id="Zfx-VS-kSf"/>
                     </constraints>
-                    <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" alignment="right" title="Label" id="Bxb-mR-M88">
+                    <textFieldCell key="cell" lineBreakMode="clipping" allowsUndo="NO" alignment="right" title="Time" id="Bxb-mR-M88" userLabel="Time">
                         <font key="font" size="10" name="HelveticaNeue"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="YEo-QS-Eb9">
-                    <rect key="frame" x="227" y="3" width="29" height="24"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YEo-QS-Eb9">
+                    <rect key="frame" x="226" y="5" width="25" height="21"/>
                     <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DRL-Nf-j36">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                        <font key="font" metaFont="controlContent" size="11"/>
+                        <font key="font" metaFont="message" size="11"/>
                     </buttonCell>
                     <connections>
                         <action selector="editEventDetails:" target="-2" id="5zj-rF-CvX"/>
@@ -58,17 +59,19 @@
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="UP8-WZ-eax" firstAttribute="baseline" secondItem="mjt-cn-Q6L" secondAttribute="firstBaseline" constant="1" id="1AC-MC-eit"/>
-                <constraint firstItem="UP8-WZ-eax" firstAttribute="leading" secondItem="mjt-cn-Q6L" secondAttribute="trailing" constant="2" id="1lK-AL-DNu"/>
+                <constraint firstItem="YEo-QS-Eb9" firstAttribute="leading" secondItem="UP8-WZ-eax" secondAttribute="trailing" constant="2" id="DHs-nu-ohK"/>
+                <constraint firstAttribute="bottom" secondItem="mjt-cn-Q6L" secondAttribute="bottom" constant="8" id="K42-WO-dmF"/>
+                <constraint firstItem="mjt-cn-Q6L" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="KQg-yl-ks2"/>
+                <constraint firstItem="kwE-vK-an8" firstAttribute="leading" secondItem="XLi-bL-QJB" secondAttribute="leading" constant="4" id="MxZ-sc-EYg"/>
                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="O9f-ER-zcS"/>
-                <constraint firstItem="mjt-cn-Q6L" firstAttribute="top" secondItem="UP8-WZ-eax" secondAttribute="top" constant="-1" id="fxa-lQ-Wcu"/>
-                <constraint firstItem="mjt-cn-Q6L" firstAttribute="leading" secondItem="kwE-vK-an8" secondAttribute="trailing" constant="2" id="gJK-8Z-eAN"/>
+                <constraint firstItem="mjt-cn-Q6L" firstAttribute="leading" secondItem="kwE-vK-an8" secondAttribute="trailing" constant="7" id="SCx-eT-e4p"/>
+                <constraint firstItem="kwE-vK-an8" firstAttribute="centerY" secondItem="mjt-cn-Q6L" secondAttribute="centerY" id="WOx-QS-XCK"/>
+                <constraint firstAttribute="trailing" secondItem="YEo-QS-Eb9" secondAttribute="trailing" constant="5" id="k8b-8v-Tk5"/>
                 <constraint firstAttribute="width" constant="253" id="mNq-uW-Rk1"/>
-                <constraint firstAttribute="bottom" secondItem="mjt-cn-Q6L" secondAttribute="bottom" constant="8" id="ogI-4L-8m6"/>
-                <constraint firstAttribute="trailing" secondItem="UP8-WZ-eax" secondAttribute="trailing" constant="27" id="utv-IZ-Lvp"/>
-                <constraint firstItem="mjt-cn-Q6L" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="x9d-Og-EMO"/>
+                <constraint firstItem="YEo-QS-Eb9" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="xnd-7p-h0n"/>
+                <constraint firstItem="UP8-WZ-eax" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="zCZ-ly-wKS" userLabel="Event Time.centerY = Event Color.centerY"/>
             </constraints>
-            <point key="canvasLocation" x="-521" y="-92"/>
+            <point key="canvasLocation" x="-521.5" y="-92.5"/>
         </customView>
     </objects>
     <resources>
