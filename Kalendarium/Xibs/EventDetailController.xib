@@ -8,12 +8,11 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="EventDetailController" customModule="Kalendarium" customModuleProvider="target">
             <connections>
-                <outlet property="eventCalendar" destination="8vu-JO-avX" id="mWv-7Q-Uvk"/>
+                <outlet property="eventCalendar" destination="3eZ-Jz-i2Z" id="Jln-YQ-acR"/>
                 <outlet property="eventFromTime" destination="Dyv-Uq-OWN" id="lHh-Vj-sHp"/>
                 <outlet property="eventTitle" destination="3lv-7P-PzP" id="YSg-qz-WuE"/>
                 <outlet property="eventToTime" destination="ELz-Yg-50G" id="g84-3A-o5l"/>
                 <outlet property="gridView" destination="r30-Ho-0HZ" id="ymk-2M-2sm"/>
-                <outlet property="theView" destination="Hz6-mo-xeY" id="yXr-zb-SBC"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -54,7 +53,7 @@
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YoZ-cD-BOK">
                                 <rect key="frame" x="18" y="127" width="31" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="From" id="SlT-oO-PFe">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -67,7 +66,7 @@
                                     <constraint firstAttribute="width" constant="180" id="IPw-Ru-rzg"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Start" id="dA5-oc-kLT">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -77,7 +76,7 @@
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cVt-EL-889">
                                 <rect key="frame" x="32" y="107" width="17" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="To" id="G1Y-3F-5wK">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -90,7 +89,7 @@
                                     <constraint firstAttribute="width" constant="180" id="nfb-NS-PYR"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" title="End" id="Tzb-Y3-hWN">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -100,7 +99,7 @@
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iU6-5z-UWj">
                                 <rect key="frame" x="8" y="87" width="41" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Repeat" id="9zf-gb-IZ0">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -113,7 +112,7 @@
                                     <constraint firstAttribute="width" constant="180" id="W1A-Xe-oVa"/>
                                 </constraints>
                                 <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" title="Repeating" id="NXH-iN-fep">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -123,7 +122,7 @@
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Xv-cG-Z7t">
                                 <rect key="frame" x="25" y="67" width="24" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="End" id="PdO-KX-VZF">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -136,7 +135,7 @@
                                     <constraint firstAttribute="width" constant="180" id="OIR-Ih-kXZ"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" title="Repeat End" id="nqc-e0-bNL">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -146,22 +145,22 @@
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2ru-AR-JCg">
                                 <rect key="frame" x="-2" y="40" width="51" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Calendar" id="Fre-Wv-raq">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </gridCell>
                         <gridCell row="8GV-LN-k0M" column="mgw-RA-b0D" xPlacement="leading" yPlacement="center" id="etl-ag-whZ">
-                            <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8vu-JO-avX">
-                                <rect key="frame" x="51" y="37" width="185" height="25"/>
+                            <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3eZ-Jz-i2Z" customClass="CalendarPopUp" customModule="Kalendarium" customModuleProvider="target">
+                                <rect key="frame" x="51" y="37" width="190" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="ael-eV-ncp"/>
+                                    <constraint firstAttribute="width" constant="185" id="t7y-Zq-Opg"/>
                                 </constraints>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="2yN-vN-xE4">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Kzb-gd-S4m">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <menu key="menu" autoenablesItems="NO" id="Kfa-9q-DbP"/>
+                                    <menu key="menu" id="VpF-03-eBW"/>
                                 </popUpButtonCell>
                             </popUpButton>
                         </gridCell>
@@ -169,7 +168,7 @@
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dgE-uM-QAo">
                                 <rect key="frame" x="0.0" y="20" width="49" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Location" id="AEg-zq-aS8">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -182,7 +181,7 @@
                                     <constraint firstAttribute="width" constant="180" id="pfA-dn-sNd"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Event Location" id="RKw-XF-bar">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -192,7 +191,7 @@
                             <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-Qq-cUy">
                                 <rect key="frame" x="14" y="0.0" width="35" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Notes" id="PWR-bM-b84">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -205,7 +204,7 @@
                                     <constraint firstAttribute="width" constant="180" id="MJf-nR-aT5"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Event Notes" id="ElQ-he-4iy">
-                                    <font key="font" metaFont="toolTip"/>
+                                    <font key="font" metaFont="controlContent" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

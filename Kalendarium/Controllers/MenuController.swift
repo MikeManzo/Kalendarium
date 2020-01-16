@@ -15,6 +15,7 @@ import SwiftyUserDefaults
 extension PreferencePane.Identifier {
     static let calendar = Identifier("calendar")
     static let general = Identifier("general")
+    static let admin = Identifier("admin")
 }
 
 class MenuController: NSObject {
@@ -29,7 +30,8 @@ class MenuController: NSObject {
     
     lazy var preferences: [PreferencePane] = [
         GeneralPreferencesController(),
-        CalendarPreferencesController()
+        CalendarPreferencesController(),
+        AdminPreferencesController()
     ]
 
     lazy var preferencesWindowController = PreferencesWindowController(

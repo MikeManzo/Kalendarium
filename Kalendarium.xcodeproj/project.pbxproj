@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27019D1E23C5EBEC00C5406C /* MockCalendarPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27019D1C23C5EBEC00C5406C /* MockCalendarPopup.xib */; };
+		27019D2023C5FA5300C5406C /* MockCalendarPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27019D1F23C5FA5300C5406C /* MockCalendarPopup.swift */; };
 		2705E058237F67F800CF013C /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2705E057237F67F800CF013C /* EventStore.swift */; };
 		270F2FEC23772E16006B78A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F2FEB23772E16006B78A7 /* AppDelegate.swift */; };
 		270F2FF023772E18006B78A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 270F2FEF23772E18006B78A7 /* Assets.xcassets */; };
@@ -18,6 +20,7 @@
 		270F3022237879F3006B78A7 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 270F3021237879F3006B78A7 /* SwiftyUserDefaults */; };
 		270F302523788AC1006B78A7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 270F302423788AC0006B78A7 /* .swiftlint.yml */; };
 		271C5C3423A5A09500F261AC /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C5C3323A5A09500F261AC /* EventDetailsView.swift */; };
+		2735EDE823CA3F3E00C20D08 /* NSRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735EDE723CA3F3E00C20D08 /* NSRect+Extension.swift */; };
 		274A5C5A238053500019619C /* EventMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C59238053500019619C /* EventMenuItemViewController.swift */; };
 		274A5C5C238053A00019619C /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5B238053A00019619C /* NSDate+Extension.swift */; };
 		274A5C5E238054310019619C /* CustomMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274A5C5D238054310019619C /* CustomMenuItemView.swift */; };
@@ -30,6 +33,9 @@
 		277D66D323846F47007E311F /* CalendarPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D66D123846F47007E311F /* CalendarPreferencesController.swift */; };
 		277D66D423846F47007E311F /* CalendarPreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277D66D223846F47007E311F /* CalendarPreferencesController.xib */; };
 		277D66D72386A264007E311F /* SwiftMoment in Frameworks */ = {isa = PBXBuildFile; productRef = 277D66D62386A264007E311F /* SwiftMoment */; };
+		27883F5023C72C66000403F7 /* AdminPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27883F4E23C72C66000403F7 /* AdminPreferencesController.swift */; };
+		27883F5123C72C66000403F7 /* AdminPreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27883F4F23C72C66000403F7 /* AdminPreferencesController.xib */; };
+		27883F5323C73051000403F7 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27883F5223C73051000403F7 /* XibView.swift */; };
 		2791B7F9237B2661009E506E /* DesignFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B7F8237B2661009E506E /* DesignFacts.swift */; };
 		2791B7FB237B2ABC009E506E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B7FA237B2ABC009E506E /* Clock.swift */; };
 		2791B7FE237B2E12009E506E /* Moment+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791B7FD237B2E12009E506E /* Moment+Extension.swift */; };
@@ -69,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27019D1C23C5EBEC00C5406C /* MockCalendarPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MockCalendarPopup.xib; sourceTree = "<group>"; };
+		27019D1F23C5FA5300C5406C /* MockCalendarPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCalendarPopup.swift; sourceTree = "<group>"; };
 		2705E057237F67F800CF013C /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStore.swift; path = Kalendarium/Models/EventStore.swift; sourceTree = SOURCE_ROOT; };
 		270F2FE823772E16006B78A7 /* Kalendarium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kalendarium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		270F2FEB23772E16006B78A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 		270F301E237878C7006B78A7 /* NSGraphicsImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSGraphicsImageRenderer.swift; sourceTree = "<group>"; };
 		270F302423788AC0006B78A7 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		271C5C3323A5A09500F261AC /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
+		2735EDE723CA3F3E00C20D08 /* NSRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRect+Extension.swift"; sourceTree = "<group>"; };
 		274A5C59238053500019619C /* EventMenuItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMenuItemViewController.swift; sourceTree = "<group>"; };
 		274A5C5B238053A00019619C /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		274A5C5D238054310019619C /* CustomMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuItemView.swift; sourceTree = "<group>"; };
@@ -96,6 +105,9 @@
 		277D66CE23846F0E007E311F /* GeneralPreferencesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralPreferencesController.xib; sourceTree = "<group>"; };
 		277D66D123846F47007E311F /* CalendarPreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPreferencesController.swift; sourceTree = "<group>"; };
 		277D66D223846F47007E311F /* CalendarPreferencesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarPreferencesController.xib; sourceTree = "<group>"; };
+		27883F4E23C72C66000403F7 /* AdminPreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPreferencesController.swift; sourceTree = "<group>"; };
+		27883F4F23C72C66000403F7 /* AdminPreferencesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminPreferencesController.xib; sourceTree = "<group>"; };
+		27883F5223C73051000403F7 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		2791B7F8237B2661009E506E /* DesignFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignFacts.swift; sourceTree = "<group>"; };
 		2791B7FA237B2ABC009E506E /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		2791B7FD237B2E12009E506E /* Moment+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moment+Extension.swift"; sourceTree = "<group>"; };
@@ -210,6 +222,7 @@
 				2791B802237B3034009E506E /* VibrantView.swift */,
 				274A5C5D238054310019619C /* CustomMenuItemView.swift */,
 				271C5C3323A5A09500F261AC /* EventDetailsView.swift */,
+				27019D1F23C5FA5300C5406C /* MockCalendarPopup.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,11 +247,13 @@
 		277D66CC238464C3007E311F /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				27883F4F23C72C66000403F7 /* AdminPreferencesController.xib */,
 				277D66D223846F47007E311F /* CalendarPreferencesController.xib */,
 				27BB4F6823A02EDB00BFE387 /* DayMenuItemController.xib */,
 				277D66CE23846F0E007E311F /* GeneralPreferencesController.xib */,
 				27E552A723A28BBD00A4FB69 /* EventDetailController.xib */,
 				27510CF9239D77F900DC5708 /* EventItemController.xib */,
+				27019D1C23C5EBEC00C5406C /* MockCalendarPopup.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -264,6 +279,7 @@
 				2791B7FD237B2E12009E506E /* Moment+Extension.swift */,
 				27BB4F6B23A1491D00BFE387 /* NSView+Extension.swift */,
 				27CFABC523A69B7500607262 /* NSGridView+Extension.swift */,
+				2735EDE723CA3F3E00C20D08 /* NSRect+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +289,7 @@
 			children = (
 				2791B800237B2F27009E506E /* MonthControlButton.swift */,
 				2791B806237B3341009E506E /* CalendarDayButton.swift */,
+				27883F5223C73051000403F7 /* XibView.swift */,
 			);
 			path = "Custom Controls";
 			sourceTree = "<group>";
@@ -280,14 +297,15 @@
 		2792F40B2379C87800CAF8F6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2792F40C2379C8BA00CAF8F6 /* MenuController.swift */,
-				2792F40E2379D4AA00CAF8F6 /* CalendarViewController.swift */,
+				27883F4E23C72C66000403F7 /* AdminPreferencesController.swift */,
 				2791B804237B32BA009E506E /* CalendarDayViewController.swift */,
-				274A5C59238053500019619C /* EventMenuItemViewController.swift */,
-				277D66CD23846F0E007E311F /* GeneralPreferencesController.swift */,
 				277D66D123846F47007E311F /* CalendarPreferencesController.swift */,
+				2792F40E2379D4AA00CAF8F6 /* CalendarViewController.swift */,
 				27BB4F6723A02EDB00BFE387 /* DayMenuItemController.swift */,
 				27E552A623A28BBD00A4FB69 /* EventDetailController.swift */,
+				274A5C59238053500019619C /* EventMenuItemViewController.swift */,
+				277D66CD23846F0E007E311F /* GeneralPreferencesController.swift */,
+				2792F40C2379C8BA00CAF8F6 /* MenuController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -413,10 +431,12 @@
 				27BB4F6A23A02EDB00BFE387 /* DayMenuItemController.xib in Resources */,
 				270F2FF023772E18006B78A7 /* Assets.xcassets in Resources */,
 				27E552A923A28BBD00A4FB69 /* EventDetailController.xib in Resources */,
+				27883F5123C72C66000403F7 /* AdminPreferencesController.xib in Resources */,
 				277D66D023846F0E007E311F /* GeneralPreferencesController.xib in Resources */,
 				277D66D423846F47007E311F /* CalendarPreferencesController.xib in Resources */,
 				270F2FF323772E18006B78A7 /* Main.storyboard in Resources */,
 				27510CFA239D77F900DC5708 /* EventItemController.xib in Resources */,
+				27019D1E23C5EBEC00C5406C /* MockCalendarPopup.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +488,8 @@
 				271C5C3423A5A09500F261AC /* EventDetailsView.swift in Sources */,
 				274A5C5A238053500019619C /* EventMenuItemViewController.swift in Sources */,
 				2792F40F2379D4AA00CAF8F6 /* CalendarViewController.swift in Sources */,
+				27883F5323C73051000403F7 /* XibView.swift in Sources */,
+				2735EDE823CA3F3E00C20D08 /* NSRect+Extension.swift in Sources */,
 				277D66CF23846F0E007E311F /* GeneralPreferencesController.swift in Sources */,
 				274A5C5E238054310019619C /* CustomMenuItemView.swift in Sources */,
 				27BB4F6C23A1491D00BFE387 /* NSView+Extension.swift in Sources */,
@@ -481,6 +503,7 @@
 				270F301F237878C7006B78A7 /* NSGraphicsImageRenderer.swift in Sources */,
 				2792F411237A1C4C00CAF8F6 /* CalendarGrid.swift in Sources */,
 				274ED1F52395844F000D2581 /* Error.swift in Sources */,
+				27019D2023C5FA5300C5406C /* MockCalendarPopup.swift in Sources */,
 				270F2FEC23772E16006B78A7 /* AppDelegate.swift in Sources */,
 				274A5C5C238053A00019619C /* NSDate+Extension.swift in Sources */,
 				2791B7FE237B2E12009E506E /* Moment+Extension.swift in Sources */,
@@ -488,6 +511,7 @@
 				27EA6A92238985CF006F6514 /* NSImage+Extension.swift in Sources */,
 				2791B807237B3341009E506E /* CalendarDayButton.swift in Sources */,
 				270F301923776036006B78A7 /* CalendarView.swift in Sources */,
+				27883F5023C72C66000403F7 /* AdminPreferencesController.swift in Sources */,
 				2791B803237B3034009E506E /* VibrantView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

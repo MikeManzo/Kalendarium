@@ -15,7 +15,6 @@ class EventDetailController: NSViewController {
     @IBOutlet weak var eventToTime: NSTextField!
     @IBOutlet weak var eventCalendar: NSPopUpButton!
     @IBOutlet weak var gridView: NSGridView!
-    @IBOutlet weak var theView: EventDetailsView!
     
     let theEvent: EKEvent
     
@@ -37,21 +36,19 @@ class EventDetailController: NSViewController {
         gridView.mergeCellsInRow(row: 0, startingColumn: 0, endingColumn: 1)
         setupCalendarSelector()
                
-//        gridView.row(at: 5).isHidden = true
         preferredContentSize = gridView.fittingSize
     }
     
     override func viewDidAppear() {
-//        gridView.row(at: 5).isHidden = true
         preferredContentSize = gridView.fittingSize
     }
-    
+
     private func populateDetails() {
         let items = eventCalendar.itemArray
         if let menuItem = items.first(where: { ($0.representedObject as? String) == theEvent.calendar.calendarIdentifier}) {
             eventCalendar.select(menuItem)
         }
-        
+
         eventFromTime.stringValue   = theEvent.startDate.time()
         eventToTime.stringValue     = theEvent.endDate.time()
         eventTitle.stringValue      = theEvent.title

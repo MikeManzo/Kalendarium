@@ -61,6 +61,7 @@ class EventMenuItemViewController: NSViewController {
         eventTitle.stringValue      = theEvent.title
         disclosure.isHidden         = true
         theView.delegate            = self
+        eventTitle.preferredMaxLayoutWidth = 110
     }
     
     override func viewWillAppear() {
@@ -88,7 +89,6 @@ class EventMenuItemViewController: NSViewController {
             let newItem = NSMenuItem()
             newItem.view = vc.view
             menuItem.menu?.insertItem(newItem, at: index + 1)
-            print(index+1)
 
             return
         }

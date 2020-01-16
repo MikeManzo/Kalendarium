@@ -21,7 +21,7 @@
         <customView translatesAutoresizingMaskIntoConstraints="NO" id="XLi-bL-QJB" customClass="CustomMenuItemView" customModule="Kalendarium" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="253" height="31"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-cn-Q6L">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-cn-Q6L">
                     <rect key="frame" x="16" y="8" width="114" height="15"/>
                     <textFieldCell key="cell" allowsUndo="NO" title="Label" id="IeZ-As-Jx1">
                         <font key="font" metaFont="label" size="12"/>
@@ -30,7 +30,7 @@
                     </textFieldCell>
                 </textField>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="kwE-vK-an8">
-                    <rect key="frame" x="0.0" y="8" width="16" height="16"/>
+                    <rect key="frame" x="0.0" y="7" width="16" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="pSY-WT-YUI"/>
                 </imageView>
@@ -60,10 +60,11 @@
             <constraints>
                 <constraint firstItem="UP8-WZ-eax" firstAttribute="baseline" secondItem="mjt-cn-Q6L" secondAttribute="firstBaseline" constant="1" id="1AC-MC-eit"/>
                 <constraint firstItem="UP8-WZ-eax" firstAttribute="leading" secondItem="mjt-cn-Q6L" secondAttribute="trailing" constant="2" id="1lK-AL-DNu"/>
-                <constraint firstAttribute="height" constant="31" id="O9f-ER-zcS"/>
+                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="O9f-ER-zcS"/>
                 <constraint firstItem="mjt-cn-Q6L" firstAttribute="top" secondItem="UP8-WZ-eax" secondAttribute="top" constant="-1" id="fxa-lQ-Wcu"/>
                 <constraint firstItem="mjt-cn-Q6L" firstAttribute="leading" secondItem="kwE-vK-an8" secondAttribute="trailing" constant="2" id="gJK-8Z-eAN"/>
                 <constraint firstAttribute="width" constant="253" id="mNq-uW-Rk1"/>
+                <constraint firstAttribute="bottom" secondItem="mjt-cn-Q6L" secondAttribute="bottom" constant="8" id="ogI-4L-8m6"/>
                 <constraint firstAttribute="trailing" secondItem="UP8-WZ-eax" secondAttribute="trailing" constant="27" id="utv-IZ-Lvp"/>
                 <constraint firstItem="mjt-cn-Q6L" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="x9d-Og-EMO"/>
             </constraints>

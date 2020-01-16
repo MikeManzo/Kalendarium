@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/sindresorhus/Preferences",
         "state": {
           "branch": "master",
-          "revision": "9da487dfa252ce3203372bbd87dade0f8de1de1f",
+          "revision": "139484818fe4b6b89823fa462cab686b3a419928",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/sunshinejr/SwiftyUserDefaults",
         "state": {
           "branch": "master",
-          "revision": "dbd126b8957fc5af94d1ed5443f8f4b9405356ee",
+          "revision": "1930a81a299b074fd72eee09e88e452ad37dc34d",
           "version": null
         }
       }
