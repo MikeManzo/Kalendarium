@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -48,10 +48,10 @@
                     </textFieldCell>
                 </textField>
                 <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YEo-QS-Eb9">
-                    <rect key="frame" x="226" y="5" width="25" height="21"/>
+                    <rect key="frame" x="230" y="5" width="25" height="21"/>
                     <buttonCell key="cell" type="disclosure" bezelStyle="roundedDisclosure" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DRL-Nf-j36">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                        <font key="font" metaFont="message" size="11"/>
+                        <font key="font" metaFont="toolTip"/>
                     </buttonCell>
                     <connections>
                         <action selector="editEventDetails:" target="-2" id="5zj-rF-CvX"/>
@@ -59,14 +59,14 @@
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="YEo-QS-Eb9" firstAttribute="leading" secondItem="UP8-WZ-eax" secondAttribute="trailing" constant="2" id="DHs-nu-ohK"/>
+                <constraint firstItem="YEo-QS-Eb9" firstAttribute="leading" secondItem="UP8-WZ-eax" secondAttribute="trailing" constant="6" id="DHs-nu-ohK"/>
                 <constraint firstAttribute="bottom" secondItem="mjt-cn-Q6L" secondAttribute="bottom" constant="8" id="K42-WO-dmF"/>
                 <constraint firstItem="mjt-cn-Q6L" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="KQg-yl-ks2"/>
                 <constraint firstItem="kwE-vK-an8" firstAttribute="leading" secondItem="XLi-bL-QJB" secondAttribute="leading" constant="4" id="MxZ-sc-EYg"/>
                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="O9f-ER-zcS"/>
                 <constraint firstItem="mjt-cn-Q6L" firstAttribute="leading" secondItem="kwE-vK-an8" secondAttribute="trailing" constant="7" id="SCx-eT-e4p"/>
                 <constraint firstItem="kwE-vK-an8" firstAttribute="centerY" secondItem="mjt-cn-Q6L" secondAttribute="centerY" id="WOx-QS-XCK"/>
-                <constraint firstAttribute="trailing" secondItem="YEo-QS-Eb9" secondAttribute="trailing" constant="5" id="k8b-8v-Tk5"/>
+                <constraint firstAttribute="trailing" secondItem="YEo-QS-Eb9" secondAttribute="trailing" constant="1" id="k8b-8v-Tk5"/>
                 <constraint firstAttribute="width" constant="253" id="mNq-uW-Rk1"/>
                 <constraint firstItem="YEo-QS-Eb9" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="xnd-7p-h0n"/>
                 <constraint firstItem="UP8-WZ-eax" firstAttribute="centerY" secondItem="XLi-bL-QJB" secondAttribute="centerY" id="zCZ-ly-wKS" userLabel="Event Time.centerY = Event Color.centerY"/>
